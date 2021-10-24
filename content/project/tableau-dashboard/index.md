@@ -12,4 +12,4 @@ image:
 ---
 Provides a dashboard visualizing all recorded earthquakes with a magnitude of 6+ from 1900 - 2013 via [USGS](http://earthquake.usgs.gov/earthquakes/search/) (United States Geological Survey)
 
-<iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21149646&authkey=AOoq6YQZahN5TmU&em=2" width="476" height="288" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21149646&authkey=AOoq6YQZahN5TmU&em=2" width=100% height=100% frameborder="1" scrolling="no"></iframe>

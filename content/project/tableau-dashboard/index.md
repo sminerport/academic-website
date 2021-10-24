@@ -6,7 +6,7 @@ featured: false
 external_link: ""
 links:
   - url: https://1drv.ms/w/s!Ap7Z6Fz93I5biZEOvLDhka9Q6zokwQ?e=77A5U3
-    icon_pack: far
+    icon_pack: null
 image:
   filename: ""
   focal_point: Smart

@@ -33,9 +33,9 @@ education:
       year: 2023
     - course: Software Developer Certification
       institution: Red Rocks Community College
-      year: 2019
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
+      year: 2017
+    - course: BA in Psychology
+      institution: University of Maryland, Baltimore County
       year: 2008
 email: ""
 superuser: true

@@ -41,6 +41,6 @@ email: ""
 superuser: true
 highlight_name: true
 ---
-Scott Miner is a graduate of the Master of Science Data Analytics (MSDA) program with a specialization in Artificial Intelligence (AI) and Machine Learning (ML) at Colorado State University Global.
+Scott Miner is a graduate of the Master of Science Data Analytics (MSDA) program with a specialization in Artificial Intelligence (AI) and Machine Learning (ML) at Colorado State University Global. Testing.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.

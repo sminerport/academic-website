@@ -4,12 +4,12 @@ date: 2021-10-24T07:13:33.971Z
 draft: false
 featured: false
 external_link: ""
-links:
-  - url: https://1drv.ms/w/s!Ap7Z6Fz93I5biZEOvLDhka9Q6zokwQ?e=77A5U3
-    icon_pack: null
+links: []
 image:
   filename: ""
   focal_point: Smart
   preview_only: false
 ---
 Provides a dashboard visualizing all recorded earthquakes with a magnitude of 6+ from 1900 - 2013 via [USGS](http://earthquake.usgs.gov/earthquakes/search/) (United States Geological Survey)
+
+<iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21149646&authkey=AOoq6YQZahN5TmU&em=2" width="476" height="288" frameborder="0" scrolling="no"></iframe>

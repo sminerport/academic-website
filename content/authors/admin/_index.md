@@ -1,6 +1,6 @@
 ---
-title: Nelson Bighetti
-role: Professor of Artificial Intelligence
+title: Scott Miner
+role: Machine Learning Engineer
 bio: My research interests include distributed robotics, mobile computing and
   programmable matter.
 interests:
@@ -30,7 +30,7 @@ education:
   courses:
     - course: MS in Data Analytics
       institution: Colorado State University Global
-      year: 2021
+      year: 2023
     - course: Software Developer Certification
       institution: Red Rocks Community College
       year: 2019

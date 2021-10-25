@@ -1,11 +1,10 @@
 ---
 title: Scott Miner
 role: Machine Learning Engineer
-bio: My research interests include distributed robotics, mobile computing and
-  programmable matter.
+bio: My research interests include natural language processing (NLP) and Machine Learning.
 interests:
   - Artificial Intelligence
-  - Computational Linguistics
+  - Natural Language Processing (NLP) 
   - Information Retrieval
 social:
   - icon: envelope
@@ -13,10 +12,10 @@ social:
     link: /#contact
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-  - icon: graduation-cap
-    icon_pack: fas
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+    link: https://twitter.com/scottdatascience
+#  - icon: graduation-cap
+#   icon_pack: fas
+#    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
   - icon: github
     icon_pack: fab
     link: https://github.com/sminerport
@@ -30,17 +29,20 @@ education:
   courses:
     - course: MS in Data Analytics
       institution: Colorado State University Global
-      year: 2023
-    - course: Software Developer Certification
+      year: 2019
+    - course: Certified Programming Specialist
       institution: Red Rocks Community College
       year: 2017
+    - course: Certified Software Developer
+      institution: Red Rocks Community College
+      year: 2016
     - course: BA in Psychology
       institution: University of Maryland, Baltimore County
-      year: 2008
-email: ""
+      year: 2009
+email: "scott.miner@csuglobal.edu"
 superuser: true
 highlight_name: true
 ---
 Scott Miner is a graduate of the Master of Science Data Analytics (MSDA) program with a specialization in Artificial Intelligence (AI) and Machine Learning (ML) at Colorado State University Global. Testing.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/scott_miner_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.

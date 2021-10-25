@@ -4,11 +4,16 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Appearance
-
-theme: minimal
+# Your choice of color theme
+theme: coffee
+# Automatically change light/dark mode based on user preference?
+# Setting this to false automatically changes the theme mode
+# according to user preference
 day_night: true
-font: ''
-font_size: L
+# Your choice of font
+font: 'Minimal'
+# Your choice of font size
+font_size: xl
 
 # SEO
 
@@ -77,8 +82,8 @@ address_format: en-us
 highlight: true
 highlight_languages:
   - r
-math: false
-diagram: false
+math: true
+diagram: true
 privacy_pack: false
 edit_page:
   repo_url: ''

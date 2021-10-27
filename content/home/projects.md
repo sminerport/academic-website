@@ -7,10 +7,10 @@ widget: portfolio
 headless: true
 
 # Order that this section appears on the page.
-weight: 65
+weight: 10
 
-title: Projects
-subtitle: ''
+title: Data Analytics Projects 
+subtitle: 'Write-ups for various projects written in Python, SAS, R, SQL, etc.'
 
 content:
   # Page type to display. E.g. project.
@@ -27,6 +27,12 @@ content:
   filter_button:
   - name: All
     tag: '*'
+  - name: SAS
+    tag: 'SAS'
+  - name: Python
+    tag: 'python'
+  - name: R
+    tag: 'r'
   - name: Deep Learning
     tag: Deep Learning
   - name: Other
@@ -41,8 +47,11 @@ design:
   #   2 = Compact
   #   3 = Card
   #   5 = Showcase
-  view: 2
+  view: 3
 
   # For Showcase view, flip alternate rows?
-  flip_alt_rows: false
+  flip_alt_rows: true
 ---
+
+This section contains write-ups of data analytics projects. 
+

@@ -1,12 +1,12 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Running SAS Code on Dataset Provided by U.S. Department of Health & Human Services"
-summary: "Generates summary statistics and analyzes data from the U.S. Department of Health and Human Services."
+title: "Retail Clothing Store"
+summary: "Provides recommendations for a clothing retailer to utilize more effective direct marketing techniques to increase sales and maximize profits"
 authors: ["admin"]
-tags: ["SAS", "History of Data Analytics", "Management Information Systems", "MIS500"] 
-categories: ["SAS", "History of Data Analytics", "Management Information Systems", "MIS500"] 
-date: 2021-10-24T23:32:39-06:00
+tags: ["SAS", "Retail", "Business Analytics"]
+categories: ["SAS", "Retail", "Business Analytics"]
+date: 2021-10-27T08:57:21-06:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -15,8 +15,8 @@ external_link: ""
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "SAS Code & Output"
-  focal_point: "Smart"
+  caption: ""
+  focal_point: ""
   preview_only: false
 
 # Custom links (optional).
@@ -45,8 +45,8 @@ url_video: ""
 slides: ""
 ---
 
-This project includes SAS code to generate summary statistics and analyze data from the Agency for Healthcare Research and Quality's [Medical Expenditure Panel Survey](https://github.com/HHS-AHRQ/MEPS) (MEPS) Household Component (HC).
+This project provides recommendations for a clothing retailer to utilize more effective direct marketing techniques to increase sales and maximize profits by using SAS to analyze a dataset of the retailer's customers. Additionally, the project provides recommendations for how the retailer can better forecast future business growth.
 
 <hr/>
-{{< icon name="download" pack="fas" >}}Download the {{< staticref "uploads/SAS-Code-on-US-dataset.pdf" "newtab" >}}project{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}}Download the {{< staticref "uploads/retail-business-analytics.pdf" "newtab" >}}project{{< /staticref >}}.
 <hr/>

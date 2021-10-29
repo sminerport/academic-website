@@ -30,9 +30,9 @@ content:
   - name: SAS
     tag: 'SAS'
   - name: Python
-    tag: 'python'
+    tag: 'Python'
   - name: R
-    tag: 'r'
+    tag: 'R'
   - name: Deep Learning
     tag: Deep Learning
   - name: Other

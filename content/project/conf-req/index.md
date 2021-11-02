@@ -4,8 +4,8 @@
 title: "Mutually Conflicting User Requirements"
 summary: "Implements a process pattern addressing conflicting user requirements for a fictitious version control application via UML communication diagrams and Python script. Outputs user specifications as a PNG image file."
 authors: ["admin"]
-tags: ["UML", "Communication Diagrams", "GUI", "PNG Output", "Conflicting Requirements", "Process Pattern", "Python", "Scripts"]
-categories: ["Python", "Scripts"]
+tags: ["Artificial Intelligence", "Business Analytics", "Computer Science", "Data Warehousing", "OOP", "Python", "SQL", "Technology", "UML" , "User Requirements"] 
+categories: ["Artificial Intelligence", "Business Analytics", "Computer Science", "Data Warehousing"]
 date: 2021-10-29T11:33:41-06:00
 
 # Optional external URL for project (replaces project detail page).
@@ -50,8 +50,16 @@ slides: ""
 ---
 **Overview:** This project implements a process pattern for a Python application that prompts users to specify their preferences for a graphical user interface (GUI) version control application similar to Git. The project implements UML communication diagrams and outputs users' GUI preferences as PNG files.
 <hr/>
-<iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21640630&authkey=AIyiI_ck8CPW0xo&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
+
+**Downloads:**
+
+<ul>
+	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/conf-req.pdf" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-pdf" pack="far" >}}{{< staticref "uploads/conf-req.pdf" "newtab" >}}PDF{{< /staticref >}}</li>
+	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/conf-req.zip" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-archive" pack="far" >}}{{< staticref "uploads/conf-req.zip" "newtab" >}}ZIP{{< /staticref >}}</li>
+</ul>
 <hr/>
-<center>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/conf-req.pdf" "newtab" >}}Download PDF{{< /staticref >}}</center>
+
+**Word Document:**
+<iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21640646&authkey=AHrokvkV2Sj4e5c&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
 <hr/>
 

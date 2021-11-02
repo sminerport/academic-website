@@ -4,8 +4,8 @@
 title: "ATM Web Application"
 summary: "Implements an ATM web application using Python and the Flask micro web framework"
 authors: ["admin"]
-tags: ["Python", "Flask", "ATM"]
-categories: ["Python", "Flask", "ATM"]
+tags: ["Computer Science", "JavaScript", "Flask", "Finance", "Model-View-Controller", "OOP", "SQL", "Python", "UML", "Web Apps"]
+categories: ["Computer Science", "JavaScript", "Finance", "Model-View-Controller", "OOP", "SQL"]
 date: 2021-10-27T14:57:05-06:00
 
 # Optional external URL for project (replaces project detail page).
@@ -58,5 +58,16 @@ slides: ""
 This project presents UML sequence diagrams for an automated teller machine (ATM) web-based application. The program implements Python and the Flask micro web framework, allowing users to log in to accounts, check balances, and make withdraws. Additionally, the program implements secure coding by hashing customer PINs, disabling would-be attackers from redirecting URLs to external websites, and locking the accounts of users who have attempted three or more unsuccessful logins.
 
 <hr/>
-{{< icon name="download" pack="fas" >}}Download the {{< staticref "uploads/atm.pdf" "newtab" >}}project{{< /staticref >}}.
+
+**Downloads:**
+
+<ul>
+	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/atm.pdf" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-pdf" pack="far" >}}{{< staticref "uploads/atm.pdf" "newtab" >}}PDF{{< /staticref >}}</li>
+	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/atm.zip" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-archive" pack="far" >}}{{< staticref "uploads/atm.zip" "newtab" >}}ZIP{{< /staticref >}}</li>
+</ul>
+<hr/>
+
+**Word Document:**
+
+<iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21246109&authkey=AC1_cQ4vzP18IwU&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
 <hr/>

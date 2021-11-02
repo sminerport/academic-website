@@ -29,42 +29,74 @@ content:
     tag: '*'
   - name: Artificial Intelligence
     tag: 'Artificial Intelligence'
+  - name: Business Analytics
+    tag: 'Business Analytics'
+  - name: Capstone
+    tag: 'Capstone'
+  - name: Computer Science
+    tag: 'Computer Science'
   - name: Dashboards
     tag: 'Dashboards'
   - name: Data Analytics
-    tag: Data Analytics
+    tag: 'Data Analytics'
   - name: Data Visualization
     tag: 'Data Visualization'
   - name: Data Warehousing
     tag: 'Data Warehousing'
   - name: Earth Science
     tag: 'Earth Science'
+  - name: Enterprise Performance Management
+    tag: 'Enterprise Performance Management'
+  - name: ETL 
+    tag: 'ETL'
   - name: Finance
     tag: 'Finance'
   - name: Flask
     tag: 'Flask'
-  - name: Machine Learning
-    tag: 'Machine Learning'
-  - name: Management Information Systemes
-    tag: 'Management Information Systems'
+  - name: Government
+    tag: 'Government'
   - name: Healthcare
     tag: 'Healthcare'
+  - name: JavaScript
+    tag: 'JavaScript'
+  - name: Machine Learning
+    tag: 'Machine Learning'
+  - name: Management Information Systems
+    tag: 'Management Information Systems'
+  - name: Model-View-Controller 
+    tag: 'Model-View-Controller'
+  - name: Object-Oriented Programming 
+    tag: 'OOP'
+  - name: PostgreSQL
+    tag: 'PostgreSQL'
+  - name: PowerPoint 
+    tag: 'PowerPoint' 
+  - name: Predictive Analytics
+    tag: 'Predictive Analytics' 
+  - name: Python
+    tag: 'Python'
   - name: R
     tag: 'R'
   - name: Retail
     tag: 'Retail'
+  - name: Requirements Gathering
+    tag: 'Requirements Gathering'
   - name: SAS
     tag: 'SAS'
+  - name: Statistical Modeling
+    tag: 'Statistical Modeling' 
   - name: SQL
-    tag: SQL 
-  - name: Python
-    tag: 'Python'
+    tag: 'SQL' 
   - name: Tableau 
     tag: 'Tableau'
+  - name: Technology
+    tag: 'Technology'
   - name: UML
     tag: 'UML'
-  - name: Web-Apps
-    tag: 'Web-Apps'
+  - name: User Requirements 
+    tag: 'User Requirements'
+  - name: Web Apps
+    tag: 'Web Apps'
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.

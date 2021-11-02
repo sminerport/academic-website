@@ -4,8 +4,8 @@
 title: "Common Personality Traits"
 summary: "Implements UML class and sequence diagrams depicting personality traits shared among expert software developers."
 authors: ["admin"]
-tags: ["UML", "Class Diagrams", "Sequence Diagrams", "Object-Oriented Design", "Builder Pattern"]
-categories: ["UML", "Class Diagrams", "Sequence Diagrams", "Object-Oriented Design", "Builder Pattern"]
+tags: ["Computer Science", "OOP", "Python", "Requirements Gathering", "UML"]
+categories: ["Computer Science", "OOP", "Python", "Requirements Gathering", "UML"]
 date: 2021-10-29T17:03:22-06:00
 
 # Optional external URL for project (replaces project detail page).
@@ -51,15 +51,15 @@ slides: ""
 **Overview:** This project implements UML class and sequence diagrams depicting personality traits shared among expert software developers. The program references OODesign's *builder pattern* for inspiration.
 <hr/>
 
-**Word Document:**
-
-<iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21239674&authkey=AGhe8DBJ3agyvTM&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
-<hr/>
-
 **Downloads:**
 
 <ul>
-	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/personality.pdf" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-pdf" pack="far" >}}{{< staticref "uploads/personality.pdf" "newtab" >}}PDF{{< /staticref >}}</li>
-	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/.zip" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-archive" pack="far" >}}{{< staticref "uploads/file-archive.zip" "newtab" >}}ZIP{{< /staticref >}}</li>
+	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/common-personality-traits.pdf" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-pdf" pack="far" >}}{{< staticref "uploads/common-personality-traits.pdf" "newtab" >}}PDF{{< /staticref >}}</li>
+	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/common-personality-traits.zip" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-archive" pack="far" >}}{{< staticref "uploads/common-personality-traits.zip" "newtab" >}}ZIP{{< /staticref >}}</li>
 </ul>
+<hr/>
+
+**Word Document:**
+
+<iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21239674&authkey=AGhe8DBJ3agyvTM&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
 <hr/>

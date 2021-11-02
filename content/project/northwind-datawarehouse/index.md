@@ -4,8 +4,8 @@
 title: "Data Loading - Northwind Data"
 summary: "Develops a star schema-based OLAP data warehouse modeling a retailer's order fullfillment process" 
 authors: ["admin"] 
-tags: ["SQL", "Data Warehousing", "ETL", "PostgreSQL", "OLAP", "OLTP", "Star-Schema", "Data Analytics", "Fact Tables", "Dimension Tables"]
-categories: ["SQL", "Data Warehousing", "ETL", "PostgreSQL", "OLAP", "OLTP", "Star-Schema", "Data Analytics"]
+tags: ["Business Analytics", "Data Analytics", "Data Warehousing", "Enterprise Performance Management", "ETL", "OLAP", "OLTP", "PostgreSQL", "Retail", "RequirementsGathering", "SQL"]
+categories: ["Business Analytics", "Data Analytics", "Data Warehousing", "Enterprise Performance Management", "ETL", "OLAP"]
 date: 2021-10-25T02:42:00-06:00
 
 # Optional external URL for project (replaces project detail page).
@@ -51,5 +51,16 @@ slides: ""
 A star schema-based OLAP (online analytical processing) system models a retailer's order fulfillment process. The languages used include SQL and PostgreSQL. Also, an extract-transform-load (ETL) pipeline is created, which populates the fact and dimension tables of the star-schemea data warehouse to allow for optimized ad-hoc querying.
 
 <hr/>
-{{< icon name="download" pack="fas" >}}Download the {{< staticref "uploads/northwind-data.pdf" "newtab" >}}project{{< /staticref >}}.
+
+**Downloads:**
+
+<ul>
+	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/northwind-data.pdf" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-pdf" pack="far" >}}{{< staticref "uploads/northwind-data.pdf" "newtab" >}}PDF{{< /staticref >}}</li>
+</ul>
+<hr/>
+
+**Word Document:**
+
+<iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21204276&authkey=AMpTmvyF-7I_zHM&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
+
 <hr/>

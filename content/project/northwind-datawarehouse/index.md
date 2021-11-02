@@ -5,7 +5,7 @@ title: "Data Loading - Northwind Data"
 summary: "Develops a star schema-based OLAP data warehouse modeling a retailer's order fullfillment process" 
 authors: ["admin"] 
 tags: ["SQL", "Data Warehousing", "ETL", "PostgreSQL", "OLAP", "OLTP", "Star-Schema", "Data Analytics", "Fact Tables", "Dimension Tables"]
-categories: ["SQL", "Data Warehousing", "ETL", "PostgreSQL", "OLAP", "OLTP", "Star-Schema", "Data Analytics", "Fact Tables", "Dimension Tables"]
+categories: ["SQL", "Data Warehousing", "ETL", "PostgreSQL", "OLAP", "OLTP", "Star-Schema", "Data Analytics"]
 date: 2021-10-25T02:42:00-06:00
 
 # Optional external URL for project (replaces project detail page).

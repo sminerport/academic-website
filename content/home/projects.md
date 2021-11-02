@@ -37,6 +37,8 @@ content:
     tag: 'Data Visualization'
   - name: Data Warehousing
     tag: 'Data Warehousing'
+  - name: Earth Science
+    tag: 'Earth Science'
   - name: Finance
     tag: 'Finance'
   - name: Flask

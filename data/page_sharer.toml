@@ -26,11 +26,19 @@
   enable = true
 
 [[buttons]]
-  id = "GitHub"
-  url = "https://www.github.com/sminerport
+  id = "github"
+  url = "https://www.github.com/sminerport"
   title = "GitHub"
   icon_pack = "fab"
   icon = "github-alt"
+  enable = true
+
+[[buttons]]
+  id = "linkedin"
+  url = "https://www.linkedin.com/shareArticle?url={url}&title={title}"
+  title = "LinkedIn"
+  icon_pack = "fab"
+  icon = "linkedin-in"
   enable = true
 
 [[buttons]]

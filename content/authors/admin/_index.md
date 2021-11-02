@@ -1,18 +1,20 @@
 ---
 title: Scott Miner
 role: Machine Learning Engineer
-bio: My research interests include natural language processing (NLP) and Machine Learning.
+bio: My interests include leveraging data analytics, artificial intelligence, and machine learning to help organizations gain valuable insights from information to automate processes and enhance decision-making.
 interests:
   - Artificial Intelligence
-  - Natural Language Processing (NLP) 
-  - Information Retrieval
+  - Machine Learning 
+  - Natural Language Processing
+  - Computer vision
+ 
 social:
   - icon: envelope
     icon_pack: fas
     link: /#contact
-  - icon: twitter
-    icon_pack: fab
-    link: https://twitter.com/scottdatascience
+#  - icon: twitter
+#    icon_pack: fab
+#    link: https://twitter.com/scottdatascience
 #  - icon: graduation-cap
 #   icon_pack: fas
 #    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
@@ -43,6 +45,6 @@ email: "scott.miner@csuglobal.edu"
 superuser: true
 highlight_name: true
 ---
-Scott Miner is a graduate of the Master of Science Data Analytics (MSDA) program with a specialization in Artificial Intelligence (AI) and Machine Learning (ML) at Colorado State University Global. Testing.
+Adept at analyzing disparate data sets to gather valuable performance insight. Work collaboratively across departments to formulate and implement appropriate solutions to drive efficiency, performance, and cost savings. Excellent communication and people skills with the ability to bridge communication across diverse populations. 
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/scott_miner_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.

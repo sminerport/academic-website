@@ -3,9 +3,9 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Academic # Website name
-baseurl: 'https://example.com/' # Website URL
-copyright: '' # Footer text, e.g. '© {year} Me'
+title: Data Analytics Portfolio # Website name
+baseurl: 'https://scottminer.rbind.io/' # Website URL
+copyright: '© {year} Scott Miner' # Footer text, e.g. '© {year} Me'
 
 ############################
 ## LANGUAGE
@@ -29,11 +29,14 @@ module:
 ## ADVANCED
 ############################
 
-enableGitInfo: false
+      #sectionPagesMenu: "main"
+enableGitInfo: true 
 summaryLength: 30
 paginate: 10
 enableEmoji: true
+enableMissingTranslationPlaceholders: true
 enableRobotsTXT: true
+googleAnalytics: 
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
 permalinks:

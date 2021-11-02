@@ -7,7 +7,7 @@ widget: portfolio
 headless: true
 
 # Order that this section appears on the page.
-weight: 10
+weight: 20
 
 title: Data Analytics Projects 
 subtitle: 'Write-ups for various projects written in Python, SAS, R, SQL, etc.'
@@ -27,16 +27,42 @@ content:
   filter_button:
   - name: All
     tag: '*'
-  - name: SAS
-    tag: 'SAS'
-  - name: Python
-    tag: 'Python'
+  - name: Artificial Intelligence
+    tag: 'Artificial Intelligence'
+  - name: Dashboards
+    tag: 'Dashboards'
+  - name: Data Analytics
+    tag: Data Analytics
+  - name: Data Visualization
+    tag: 'Data Visualization'
+  - name: Data Warehousing
+    tag: 'Data Warehousing'
+  - name: Finance
+    tag: 'Finance'
+  - name: Flask
+    tag: 'Flask'
+  - name: Machine Learning
+    tag: 'Machine Learning'
+  - name: Management Information Systemes
+    tag: 'Management Information Systems'
+  - name: Healthcare
+    tag: 'Healthcare'
   - name: R
     tag: 'R'
-  - name: Deep Learning
-    tag: Deep Learning
-  - name: Other
-    tag: Demo
+  - name: Retail
+    tag: 'Retail'
+  - name: SAS
+    tag: 'SAS'
+  - name: SQL
+    tag: SQL 
+  - name: Python
+    tag: 'Python'
+  - name: Tableau 
+    tag: 'Tableau'
+  - name: UML
+    tag: 'UML'
+  - name: Web-Apps
+    tag: 'Web-Apps'
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.

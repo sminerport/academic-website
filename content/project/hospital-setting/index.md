@@ -28,10 +28,18 @@ image:
 #   icon: twitter
 
 links:
-- icon: twitter
+- icon: envelope-open-text
+  icon_pack: fas
+  name: Email
+  url: https://scottminer.rbind.io/#contact
+- icon: github
   icon_pack: fab
-  name: Follow
-  url: https://twitter.com/scottdatascienc
+  name: Github
+  url: https://github.com/sminerport
+- icon: linkedin
+  icon_pack: fab
+  name: LinkedIn
+  url: https://www.linkedin.com/in/scottdatascience
 url_code: ""
 url_pdf: ""
 url_slides: ""

@@ -27,30 +27,18 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/scottdatascienc  
-  url_code: ""
-  url_pdf: ""
-  url_slides: ""
-  url_video: ""
-- icon: lastfm-square
-  icon_pack: fab
-  name: Follow
-  url:  https://www.last.fm/user/ScottDataScienc
-  url_code: ""
-  url_pdf: ""
-  url_slides: ""
-  url_video: ""
+- icon: envelope-open-text
+  icon_pack: fas
+  name: Email
+  url: https://scottminer.rbind.io/#contact
 - icon: github
   icon_pack: fab
-  name: Follow 
-  url: https://www.github.com/sminerport 
-  url_code: ""
-  url_pdf: ""
-  url_slides: ""
-  url_video: ""
+  name: Github
+  url: https://github.com/sminerport
+- icon: linkedin
+  icon_pack: fab
+  name: LinkedIn
+  url: https://www.linkedin.com/in/scottdatascience
 
 
 # Slides (optional).
@@ -72,6 +60,6 @@ slides: ""
 
 <ul>
 	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/personality.pdf" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-pdf" pack="far" >}}{{< staticref "uploads/personality.pdf" "newtab" >}}PDF{{< /staticref >}}</li>
-	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/file-archive.zip" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-archive" pack="far" >}}{{< staticref "uploads/file-archive.zip" "newtab" >}}ZIP{{< /staticref >}}</li>
+	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/.zip" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-archive" pack="far" >}}{{< staticref "uploads/file-archive.zip" "newtab" >}}ZIP{{< /staticref >}}</li>
 </ul>
 <hr/>

@@ -28,30 +28,18 @@ image:
 #   icon: twitter
 
 links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/scottdatascienc  
-  url_code: ""
-  url_pdf: ""
-  url_slides: ""
-  url_video: ""
-- icon: lastfm-square
-  icon_pack: fab
-  name: Follow
-  url:  https://www.last.fm/user/ScottDataScienc
-  url_code: ""
-  url_pdf: ""
-  url_slides: ""
-  url_video: ""
+- icon: envelope-open-text
+  icon_pack: fas
+  name: Email
+  url: https://scottminer.rbind.io/#contact
 - icon: github
   icon_pack: fab
-  name: Follow 
-  url: https://www.github.com/sminerport 
-  url_code: ""
-  url_pdf: ""
-  url_slides: ""
-  url_video: ""
+  name: Github
+  url: https://github.com/sminerport
+- icon: linkedin
+  icon_pack: fab
+  name: LinkedIn
+  url: https://www.linkedin.com/in/scottdatascience
 
 #   Associate this project with Markdown slides.
 #   Associate this project with Markdown slides.

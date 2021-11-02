@@ -4,8 +4,8 @@
 title: "Running SAS Code on Dataset Provided by U.S. Department of Health & Human Services"
 summary: "Generates summary statistics and analyzes data from the U.S. Department of Health and Human Services."
 authors: ["admin"]
-tags: ["SAS", "History of Data Analytics", "Management Information Systems", "MIS500"] 
-categories: ["SAS", "History of Data Analytics", "Management Information Systems", "MIS500"] 
+tags: ["SAS", "Management Information Systems", "Data Analytics", "Healthcare"] 
+categories: ["SAS", "Management Information Systems", "Data Analytics", "Healthcare"] 
 date: 2021-10-24T23:32:39-06:00
 
 # Optional external URL for project (replaces project detail page).
@@ -28,14 +28,18 @@ image:
 #   icon: twitter
 
 links:
-- icon: twitter
+- icon: envelope-open-text
+  icon_pack: fas
+  name: Email
+  url: https://scottminer.rbind.io/#contact
+- icon: github
   icon_pack: fab
-  name: Follow
-  url: https://twitter.com/scottdatascienc
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
+  name: Github
+  url: https://github.com/sminerport
+- icon: linkedin
+  icon_pack: fab
+  name: LinkedIn
+  url: https://www.linkedin.com/in/scottdatascience
 
 # Slides (optional).
 #   Associate this project with Markdown slides.

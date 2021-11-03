@@ -5,7 +5,7 @@
 
 title: Data Analytics Portfolio # Website name
 baseurl: 'https://scottminer.rbind.io/' # Website URL
-copyright: '© {year} Scott Miner' # Footer text, e.g. '© {year} Me'
+copyright: 'Porfolio Icon by <a href="https://adioma.com">Adioma</a><br>Unchanged Robot Icon by <a href="https://fontawesome.com/license/free">Font Awesome</a><br>© {year} Scott Miner' # Footer text, e.g. '© {year} Me'
 
 ############################
 ## LANGUAGE

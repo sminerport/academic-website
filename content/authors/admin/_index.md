@@ -31,7 +31,7 @@ education:
   courses:
     - course: MS in Data Analytics
       institution: Colorado State University Global
-      year: 2019
+      year: 2021 
     - course: Certified Programming Specialist
       institution: Red Rocks Community College
       year: 2017

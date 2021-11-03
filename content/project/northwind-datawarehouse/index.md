@@ -62,5 +62,3 @@ A star schema-based OLAP (online analytical processing) system models a retailer
 **Word Document:**
 
 <iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21204276&authkey=AMpTmvyF-7I_zHM&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
-
-<hr/>

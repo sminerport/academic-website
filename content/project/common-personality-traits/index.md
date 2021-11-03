@@ -62,4 +62,3 @@ slides: ""
 **Word Document:**
 
 <iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21239674&authkey=AGhe8DBJ3agyvTM&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
-<hr/>

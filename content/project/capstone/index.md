@@ -70,4 +70,3 @@ This project employs a predictive correlational design to determine how accurate
 **Word Document:**
 
 <iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21212019&authkey=AB3_3dnrMe4LyC8&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
-<hr/>

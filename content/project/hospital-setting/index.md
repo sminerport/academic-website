@@ -66,4 +66,3 @@ This project implements predictive analytics and the cross-industry process for 
 
 **Word Document:**
 <iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21189083&authkey=AMsAodgXHGK26XU&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
-<hr/>

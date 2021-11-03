@@ -60,11 +60,10 @@ This project provides recommendations for a clothing retailer to utilize more ef
 **Downloads:**
 
 <ul>
-	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/personality.pdf" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-pdf" pack="far" >}}{{< staticref "uploads/retail-business-analytics.pdf" "newtab" >}}PDF{{< /staticref >}}</li>
+	<li>{{< icon name="download" pack="fas" >}}{{< staticref "uploads/retail-business-analytics.pdf" "newtab" >}}Download {{< /staticref >}}{{< icon name="file-pdf" pack="far" >}}{{< staticref "uploads/retail-business-analytics.pdf" "newtab" >}}PDF{{< /staticref >}}</li>
 </ul>
 <hr/>
 
 **Word Document:**
 
 <iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21207380&authkey=ADlxdt4NOk6AYIA&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
-<hr/>

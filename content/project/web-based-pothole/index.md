@@ -64,4 +64,3 @@ This project creates a web-based pothole tracking and repair system (PHTRS) that
 **Word Document:**
 
 <iframe src="https://onedrive.live.com/embed?cid=5B8EDCFD5CE8D99E&resid=5B8EDCFD5CE8D99E%21239607&authkey=AAOFn4WLyd8ktOY&em=2" width="100%" height="800" frameborder="1" scrolling="yes"></iframe>
-<hr/>

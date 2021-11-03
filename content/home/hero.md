@@ -3,7 +3,7 @@ widget: hero
 headless: true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
-title: Live Chatbot Implementation
+title: Live Chatbot Implementa&shy;tion
 weight: 1
 # Hero image (optional). Enter filename of an image in the assets/media/ folder.
 hero_media: 'robot-solid.svg'

@@ -10,7 +10,6 @@ main:
   - name: Resume
     url: uploads/scott_miner_resume.pdf
     weight: 20
-    new_tab: true 
   - name: Portfolio
     identifier: portfolio
     weight: 30
@@ -18,7 +17,6 @@ main:
     parent: portfolio
     identifer: live-chatbot 
     url: 'https://chatbot-v7.azurewebsites.net/'
-    new_tab: true
   - name: Projects
     parent: portfolio
     identifer: project
@@ -36,4 +34,3 @@ main:
   - name: Contact
     url: '#contact'
     weight: 60
-      

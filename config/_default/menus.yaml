@@ -5,7 +5,7 @@
 
 main:
   - name: Home
-    url: '#hero'
+    url: '#about'
     weight: 10
   - name: Resume
     url: uploads/scott_miner_resume.pdf
@@ -31,6 +31,10 @@ main:
   - name: Certifications
     url: '#accomplishments'
     weight: 50
+  - name: Live Chatbot 
+    url: '#hero'
+    identifier: live-chatbot-2
+    weight: 1
   - name: Contact
     url: '#contact'
-    weight: 60
+    weight: 70

@@ -31,7 +31,7 @@ item:
   description: |2-
     Tier 1 SAS Academic Specialization
     
-    Recipients leverage a variety of SAS tools for SAS programming, SAS datasets, SAS programming, SAS Studio, statistical analysis, data visualization, data mining, descriptive analytics, and predictive analytics.
+    Recipients leverage a variety of SAS tools for SAS datasets, SAS programming, SAS Studio, statistical analysis, data visualization, data mining, descriptive analytics, and predictive analytics.
   organization: SAS 
   organization_url: https://www.sas.com/en_us/home.html
 
@@ -43,7 +43,7 @@ item:
   description: |2-
     Tier 1 SAS Academic Specialization
     
-    Recipients leverage a variety of SAS tools for SAS programming, SAS datasets, SAS programming, SAS Enterprise Miner, SAS Studio, statistical analysis, data visualization, data mining, descriptive analytics, and predictive analytics.
+    Recipients leverage a variety of SAS tools for SAS datasets, SAS programming, SAS Enterprise Miner, SAS Studio, statistical analysis, data visualization, data mining, descriptive analytics, and predictive analytics.
 
   organization: SAS 
   organization_url: https://www.sas.com/en_us/home.html
@@ -55,7 +55,7 @@ item:
   description: |2-
     Tier 3 SAS Academic Specialization
     
-    Recipients leverage a variety of SAS tools for SAS programming, SAS datasets, SAS programming, SAS Enterprise Miner, SAS Studio, machine learning, statistical analysis, data visualization, data mining, descriptive analytics, predictive analytics, and text analytics.
+    Recipients leverage a variety of SAS tools for SAS datasets, SAS programming, SAS Enterprise Miner, SAS Studio, machine learning, statistical analysis, data visualization, data mining, descriptive analytics, predictive analytics, and text analytics.
   organization: SAS 
   organization_url: https://www.sas.com/en_us/home.html
 

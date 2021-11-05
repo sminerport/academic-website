@@ -16,9 +16,9 @@ cta:
   label: Live Chatbot 
   icon_pack: fas
   icon: robot 
-#cta_alt:
-#  url: 'https://wowchemy.com'
-#  label: View Documentation
+cta_alt:
+  url: '/project/chatbot'
+  label: View Documentation
 
 # Note. An optional note to show underneath the links.
 cta_note:

@@ -29,10 +29,14 @@ content:
     tag: '*'
   - name: Artificial Intelligence
     tag: 'Artificial Intelligence'
+  - name: Big Data 
+    tag: 'Big Data'
   - name: Business Analytics
     tag: 'Business Analytics'
   - name: Capstone
     tag: 'Capstone'
+  - name: Chatbot
+    tag: 'Chatbot'
   - name: Computer Science
     tag: 'Computer Science'
   - name: Dashboards
@@ -53,6 +57,8 @@ content:
     tag: 'Finance'
   - name: Flask
     tag: 'Flask'
+  - name: GloVe
+    tag: 'GloVe'
   - name: Government
     tag: 'Government'
   - name: Healthcare
@@ -65,6 +71,8 @@ content:
     tag: 'Management Information Systems'
   - name: Model-View-Controller 
     tag: 'Model-View-Controller'
+  - name: Natural Language Processing
+    tag: 'Natural Language Processing'
   - name: Object-Oriented Programming 
     tag: 'OOP'
   - name: PostgreSQL
@@ -83,6 +91,8 @@ content:
     tag: 'Requirements Gathering'
   - name: SAS
     tag: 'SAS'
+  - name: Seq2Seq
+    tag: 'Seq2Seq'
   - name: Statistical Modeling
     tag: 'Statistical Modeling' 
   - name: SQL
@@ -91,12 +101,18 @@ content:
     tag: 'Tableau'
   - name: Technology
     tag: 'Technology'
+  - name: Text Analytics
+    tag: 'Text Analytics'
+  - name: Transfer Learning
+    tag: 'Transfer Learning'
   - name: UML
     tag: 'UML'
   - name: User Requirements 
     tag: 'User Requirements'
   - name: Web Apps
     tag: 'Web Apps'
+  - name: Word Embeddings
+    tag: 'Word Embeddings'
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.

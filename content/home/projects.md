@@ -39,6 +39,8 @@ content:
     tag: 'Chatbot'
   - name: Computer Science
     tag: 'Computer Science'
+  - name: Computer Vision
+    tag: 'Computer Vision'
   - name: Dashboards
     tag: 'Dashboards'
   - name: Data Analytics
@@ -63,6 +65,10 @@ content:
     tag: 'Government'
   - name: Healthcare
     tag: 'Healthcare'
+  - name: Image Classification
+    tag: 'Image Classification'
+  - name: ImageNet
+    tag:  'ImageNet'
   - name: JavaScript
     tag: 'JavaScript'
   - name: Machine Learning
@@ -85,10 +91,12 @@ content:
     tag: 'Python'
   - name: R
     tag: 'R'
-  - name: Retail
-    tag: 'Retail'
   - name: Requirements Gathering
     tag: 'Requirements Gathering'
+  - name: ResNet-50
+    tag: 'ResNet-50'
+  - name: Retail
+    tag: 'Retail'
   - name: SAS
     tag: 'SAS'
   - name: Seq2Seq

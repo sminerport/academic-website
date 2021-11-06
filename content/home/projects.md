@@ -31,6 +31,8 @@ content:
     tag: 'Artificial Intelligence'
   - name: Big Data 
     tag: 'Big Data'
+  - name: Binary Search Trees
+    tag: 'Binary Search Trees'
   - name: Business Analytics
     tag: 'Business Analytics'
   - name: Capstone
@@ -45,6 +47,8 @@ content:
     tag: 'Dashboards'
   - name: Data Analytics
     tag: 'Data Analytics'
+  - name: Data Structures
+    tag: 'Data Structures'
   - name: Data Visualization
     tag: 'Data Visualization'
   - name: Data Warehousing
@@ -97,6 +101,8 @@ content:
     tag: 'ResNet-50'
   - name: Retail
     tag: 'Retail'
+  - name: Retroactive Search Trees
+    tag: 'Retroactive Search Trees'
   - name: SAS
     tag: 'SAS'
   - name: Seq2Seq
@@ -117,6 +123,8 @@ content:
     tag: 'UML'
   - name: User Requirements 
     tag: 'User Requirements'
+  - name: 'Version Control'
+    tag: 'Version Control'
   - name: Web Apps
     tag: 'Web Apps'
   - name: Word Embeddings

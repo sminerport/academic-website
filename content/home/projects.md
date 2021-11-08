@@ -45,6 +45,8 @@ content:
     tag: 'Computer Vision'
   - name: Dashboards
     tag: 'Dashboards'
+  - name: Data Algorithms
+    tag: 'Data Algoriths'
   - name: Data Analytics
     tag: 'Data Analytics'
   - name: Data Structures

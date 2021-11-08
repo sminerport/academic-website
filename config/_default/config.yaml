@@ -36,7 +36,7 @@ paginate: 10
 enableEmoji: true
 enableMissingTranslationPlaceholders: true
 enableRobotsTXT: true
-googleAnalytics: 'G-2TVE405T27'
+googleAnalytics: 
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
 permalinks:

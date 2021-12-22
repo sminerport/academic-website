@@ -39,6 +39,8 @@ content:
     tag: 'Capstone'
   - name: Chatbot
     tag: 'Chatbot'
+  - name: Classifiers
+    tag: 'Classifiers'
   - name: Computer Science
     tag: 'Computer Science'
   - name: Computer Vision
@@ -61,6 +63,8 @@ content:
     tag: 'Enterprise Performance Management'
   - name: ETL 
     tag: 'ETL'
+  - name: Euclidean Distance
+    tag: 'Euclidean Distance'
   - name: Finance
     tag: 'Finance'
   - name: Flask
@@ -75,8 +79,12 @@ content:
     tag: 'Image Classification'
   - name: ImageNet
     tag:  'ImageNet'
+  - name: Iris Dataset
+    tag: 'Iris Dataset'
   - name: JavaScript
     tag: 'JavaScript'
+  - name: k-NN
+    tag: 'k-NN'
   - name: Machine Learning
     tag: 'Machine Learning'
   - name: Management Information Systems

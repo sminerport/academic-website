@@ -1,0 +1,78 @@
+div.article-container {
+  max-width: 100%;
+}
+
+pre,
+code {
+  color: black
+}
+
+.hljs-doctag,
+.hljs-string {
+  color: black
+}
+
+.dark .hljs-doctag,
+.dark .hljs-string {
+  color: #8be9fd;
+}
+
+.hljs-attribute,
+.hljs-name,
+.hljs-tag {
+  color: black;
+}
+
+.dark .hljs-attribute,
+.dark .hljs-name,
+.dark .hljs-tag {
+  color: #8be9fd;
+}
+
+.hljs-literal,
+.hljs-number,
+.hljs-tag .hljs-attr,
+.hljs-template-variable,
+.hljs-variable {
+  color: black;
+}
+
+.dark .hljs-literal,
+.dark .hljs-number,
+.dark .hljs-tag .hljs-attr,
+.dark .hljs-template-variable,
+.dark .hljs-variable {
+  color: #8be9fd;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  color: black;
+  background: #f8f8f8;
+}
+
+code[class^='hljs'] {
+  white-space: normal;
+}
+
+code[class='hljs yaml'] {
+  white-space: pre;
+}
+
+code[class='hljs css'] {
+  white-space: pre
+}
+
+code[class^='language-python'] {
+  background-color: rgba(38, 31, 74, 0.305)
+}
+
+.dark code[class^='language-python'] {
+  background-color: rgba(58, 23, 212, 0.542)
+}
+
+text {
+  color: azure
+}

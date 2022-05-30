@@ -7,15 +7,18 @@ main:
   - name: Home
     url: '#about'
     weight: 10
+  - name: Blog
+    url: '#posts'
+    weight: 15
   - name: Resume
     url: uploads/scott_miner_resume.pdf
     weight: 20
   - name: Portfolio
     identifier: portfolio
     weight: 30
-  - name: Live Chatbot 
+  - name: Live Chatbot
     parent: portfolio
-    identifer: live-chatbot 
+    identifer: live-chatbot
     url: 'https://chatbot-v7.azurewebsites.net/'
   - name: Projects
     parent: portfolio
@@ -31,7 +34,7 @@ main:
   - name: Certifications
     url: '#accomplishments'
     weight: 50
-  - name: Live Chatbot 
+  - name: Live Chatbot
     url: '#hero'
     identifier: live-chatbot-2
     weight: 1

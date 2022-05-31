@@ -12,23 +12,13 @@ code {
   color: black
 }
 
-.dark .hljs-doctag,
-.dark .hljs-string {
-  color: #8be9fd;
-}
-
 .hljs-attribute,
 .hljs-name,
 .hljs-tag {
   color: black;
 }
 
-.dark .hljs-attribute,
-.dark .hljs-name,
-.dark .hljs-tag {
-  color: #8be9fd;
-}
-
+.hljs-title,
 .hljs-literal,
 .hljs-number,
 .hljs-tag .hljs-attr,
@@ -37,20 +27,12 @@ code {
   color: black;
 }
 
-.dark .hljs-literal,
-.dark .hljs-number,
-.dark .hljs-tag .hljs-attr,
-.dark .hljs-template-variable,
-.dark .hljs-variable {
-  color: #8be9fd;
-}
-
 .hljs {
   display: block;
   overflow-x: auto;
   padding: .5em;
-  color: black;
-  background: #f8f8f8;
+  color: white;
+  background: white;
 }
 
 code[class^='hljs'] {
@@ -62,17 +44,118 @@ code[class='hljs yaml'] {
 }
 
 code[class='hljs css'] {
-  white-space: pre
+  white-space: pre-wrap
+}
+
+code[class='hljs json'] {
+  white-space: pre-wrap;
 }
 
 code[class^='language-python'] {
-  background-color: rgba(38, 31, 74, 0.305)
+  background-color: rgb(0, 0, 0)
 }
-
 .dark code[class^='language-python'] {
-  background-color: rgba(58, 23, 212, 0.542)
+  background-color: rgb(0, 0, 0)
 }
 
-text {
-  color: azure
+.hljs-class .hljs-title {
+  color: black
+}
+
+.hljs-keyword {
+  color: black
+}
+
+code[class="hljs coffeescript"] {
+  white-space: pre-wrap
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #2f00ff;
+  font-style: italic;
+}
+
+code:not([class^='language-python']) {
+  font-style: italic;
+}
+
+.hljs-keyword {
+  color: white;
+}
+
+.hljs-doctag,
+.hljs-string {
+  color: white;
+}
+
+.hljs-title,
+.hljs-literal,
+.hljs-number,
+.hljs-tag .hljs-attr,
+.hljs-template-variable,
+.hljs-variable {
+  color: white;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #fff;
+  font-weight: 700;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #1fff00;
+  font-style: italic;
+}
+
+.hljs-attribute,
+.hljs-name,
+.hljs-tag {
+  color: white;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  color: white;
+  background: #5000ff;
+}
+
+.hljs-class .hljs-title {
+  color: white;
+}
+
+.dark pre,
+.dark code {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.hljs-function .hljs-keyword {
+  color: #ffffff;
+}
+
+.dark p code {
+  font-style: normal;
+  font-family: "Roboto Mono", monospace;
+  background-color: #170044;
+}
+
+.dark .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  color: white;
+  background: #5000ff;
+}
+
+p code {
+  color: white;
+  background-color: #886cd5;
+  font-style: normal !important;
+  font-family: "Roboto Mono", monospace;
 }

@@ -10,7 +10,7 @@ categories: ["Machine Learning", "Artificial Intelligence", "sklearn", "Python"]
 date: 2022-05-30T23:00:01.894514
 lastmod: 2022-05-30T23:00:01.894514
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

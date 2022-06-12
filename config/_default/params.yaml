@@ -5,11 +5,11 @@
 
 # Appearance
 # Your choice of color theme
-theme: minimal 
+theme: minimal
 # Automatically change light/dark mode based on user preference?
 # Setting this to false automatically changes the theme mode
 # according to user preference
-day_night: true
+day_night: false
 # Your choice of font
 font: 'Minimal'
 # Your choice of font size
@@ -25,14 +25,14 @@ twitter: 'scottdatascienc'
 
 # Contact (edit or remove options as required)
 
-email: 
+email:
 contact_links:
 
 # Site header
 
 main_menu:
   enable: true
-  align: r
+  align: left
   show_logo: true
   show_language: false
   show_day_night: true
@@ -50,7 +50,7 @@ address_format: en-us
 highlight: true
 highlight_languages:
   - r
-  - python  
+  - python
 math: true
 diagram: true
 privacy_pack: false

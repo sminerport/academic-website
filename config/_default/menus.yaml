@@ -4,40 +4,45 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Home
-    url: '#about'
-    weight: 10
-  - name: Blog
-    url: '#posts'
-    weight: 15
-  - name: Resume
-    url: uploads/scott_miner_resume.pdf
-    weight: 20
+
   - name: Portfolio
     identifier: portfolio
-    weight: 30
-  - name: Live Chatbot
+    weight: 2
+
+  - name: Blog
     parent: portfolio
-    identifer: live-chatbot
-    url: 'https://chatbot-v7.azurewebsites.net/'
+    identifer: certs
+    url: "#posts"
+    weight: 1
+
+  - name: Certifications
+    parent: portfolio
+    identifer: certs
+    url: "#accomplishments"
+    weight: 2
+
+  - name: Contact
+    parent: portfolio
+    identifier: contact
+    url: "#contact"
+    weight: 3
+
   - name: Projects
     parent: portfolio
-    identifer: project
-    url: '#projects'
-  - name: Tags
+    identifer: projects
+    url: "#projects"
+    weight: 4
+
+  - name: Resume
     parent: portfolio
-    identifier: tags
-    url: '#tags'
-  - name: Experience
-    url: '#experience'
-    weight: 40
-  - name: Certifications
-    url: '#accomplishments'
-    weight: 50
-  - name: Live Chatbot
-    url: '#hero'
-    identifier: live-chatbot-2
-    weight: 1
-  - name: Contact
-    url: '#contact'
-    weight: 70
+    identifer: resume
+    url: uploads/scott_miner_resume.pdf
+    weight: 5
+
+  - name: Qualifications
+    parent: portfolio
+    identifer: qualifications
+    url: "#qualifications"
+    weight: 6
+
+

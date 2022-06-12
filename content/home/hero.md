@@ -2,6 +2,9 @@
 widget: hero
 headless: true  # This file represents a page section.
 
+# Activate this widget? true/false
+active: false
+
 # ... Put Your Section Options Here (title etc.) ...
 title: Live Chatbot Implementa&shy;tion
 weight: 1
@@ -13,9 +16,9 @@ hero_media: 'robot-solid.svg'
 #   Remove a link/note by deleting a cta/note block.
 cta:
   url: 'https://chatbot-v7.azurewebsites.net/'
-  label: Live Chatbot 
+  label: Live Chatbot
   icon_pack: fas
-  icon: robot 
+  icon: robot
 cta_alt:
   url: '/project/chatbot'
   label: View Documentation
@@ -25,4 +28,4 @@ cta_note:
   label: ''
 ---
 
-Check out a live chatbot implementation hosted on Azure. The chatbot implements a sequence-to-sequence (Seq2Seq) architecture and pretrained word embeddings from GloVe (Global Vectors for Word Representation). 
+Check out a live chatbot implementation hosted on Azure. The chatbot implements a sequence-to-sequence (Seq2Seq) architecture and pretrained word embeddings from GloVe (Global Vectors for Word Representation).

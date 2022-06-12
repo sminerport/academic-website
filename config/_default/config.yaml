@@ -29,14 +29,14 @@ module:
 ## ADVANCED
 ############################
 
-      #sectionPagesMenu: "main"
-enableGitInfo: true 
+#sectionPagesMenu: "main"
+enableGitInfo: true
 summaryLength: 30
 paginate: 10
 enableEmoji: true
 enableMissingTranslationPlaceholders: true
 enableRobotsTXT: true
-googleAnalytics: 
+googleAnalytics:
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
 permalinks:

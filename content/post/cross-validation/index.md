@@ -5,8 +5,8 @@ title: "Evaluating a Binary Classifier"
 subtitle: "Evaluates a Binary Classifier Using Cross-Validation"
 summary: "Evaluates a Binary Classifier Using Cross-Validation"
 authors: ["Scott Miner"]
-tags: ["Cross-Validaiton", "Machine Learning", "Artificial Intelligence", "sklearn", "scikit-learn"]
-categories: ["Cross-Validaiton", "Machine Learning", "Artificial Intelligence", "sklearn", "scikit-learn"]
+tags: ["Cross-Validation", "Machine Learning", "Artificial Intelligence", "sklearn", "scikit-learn"]
+categories: ["Cross-Validation", "Machine Learning", "Artificial Intelligence", "sklearn", "scikit-learn"]
 date: 2022-06-11T23:38:41.373739
 lastmod: 2022-06-11T23:38:41.373739
 featured: false

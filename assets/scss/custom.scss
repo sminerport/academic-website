@@ -11,15 +11,11 @@ pre {
 }
 
 code.hljs.apache,
-code.hljs.swift {
-  white-space: pre-wrap;
-}
-
+code.hljs.swift,
 code.hljs.yaml,
 code.hljs.css {
   white-space: pre;
 }
-
 
 .article-categories {
   white-space: normal;

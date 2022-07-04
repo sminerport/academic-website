@@ -3,9 +3,9 @@
 
 title: "Flower Classification"
 summary: "Uses transfer learning (TL) and the ResNet-50 network with weights pre-trained on the ImageNet dataset to automate the process of classifying thumbnails of flower images for a retailer"
-authors: ["admin"] 
-tags: ["Artificial Intelligence", "Computer Science", "Computer Vision", "Data Analytics", "Image Classification", "ImageNet", "Machine Learning", "Python", "Predictive Analytics", "ResNet-50", "Retail", "Statistical Modeling", "Transfer Learning"]
-categories: ["Artificial Intelligence", "Computer Science", "Computer Vision", "Data Analytics", "Image Classification"]
+authors: ["admin"]
+tags: ["Artificial Intelligence", "Classifiers", "Data Engineering", "Machine Learning", "Software Engineering" ]
+categories: ["Artificial Intelligence", "Classifiers", "Data Engineering", "Machine Learning", "Software Engineering" ]
 date: 2021-11-05T14:55:46-06:00
 
 # Optional external URL for project (replaces project detail page).

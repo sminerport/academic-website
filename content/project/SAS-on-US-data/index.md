@@ -4,8 +4,8 @@
 title: "Running SAS Code on Dataset Provided by U.S. Department of Health & Human Services"
 summary: "Generates summary statistics and analyzes data from the U.S. Department of Health and Human Services"
 authors: ["admin"]
-tags: ["SAS", "Management Information Systems", "Data Analytics", "Healthcare", "Statistical Modeling", "Predictive Analytics", "Government"] 
-categories: ["SAS", "Management Information Systems", "Data Analytics", "Healthcare", "Statistical Modeling", "Predictive Analytics"] 
+tags: ["Algorithms", "Artificial Intelligence", "Data Engineering", "Machine Learning", "Software Engineering" ]
+categories: ["Algorithms", "Artificial Intelligence", "Data Engineering", "Machine Learning", "Software Engineering" ]
 date: 2021-10-24T23:32:39-06:00
 
 # Optional external URL for project (replaces project detail page).

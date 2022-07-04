@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 20
 
-title: Data Analytics Projects 
+title: Data Analytics Projects
 subtitle: 'Write-ups for various projects written in Python, SAS, R, SQL, etc.'
 
 content:
@@ -27,118 +27,24 @@ content:
   filter_button:
   - name: All
     tag: '*'
+  - name: Algorithms
+    tag: 'Algorithms'
   - name: Artificial Intelligence
     tag: 'Artificial Intelligence'
-  - name: Big Data 
-    tag: 'Big Data'
-  - name: Binary Search Trees
-    tag: 'Binary Search Trees'
-  - name: Business Analytics
-    tag: 'Business Analytics'
-  - name: Capstone
-    tag: 'Capstone'
-  - name: Chatbot
-    tag: 'Chatbot'
   - name: Classifiers
     tag: 'Classifiers'
-  - name: Computer Science
-    tag: 'Computer Science'
-  - name: Computer Vision
-    tag: 'Computer Vision'
   - name: Dashboards
     tag: 'Dashboards'
-  - name: Data Algorithms
-    tag: 'Data Algoriths'
-  - name: Data Analytics
-    tag: 'Data Analytics'
-  - name: Data Structures
-    tag: 'Data Structures'
-  - name: Data Visualization
-    tag: 'Data Visualization'
+  - name: Data Engineering
+    tag: 'Data Engineering'
   - name: Data Warehousing
     tag: 'Data Warehousing'
-  - name: Earth Science
-    tag: 'Earth Science'
-  - name: Enterprise Performance Management
-    tag: 'Enterprise Performance Management'
-  - name: ETL 
-    tag: 'ETL'
-  - name: Euclidean Distance
-    tag: 'Euclidean Distance'
-  - name: Finance
-    tag: 'Finance'
-  - name: Flask
-    tag: 'Flask'
-  - name: GloVe
-    tag: 'GloVe'
-  - name: Government
-    tag: 'Government'
-  - name: Healthcare
-    tag: 'Healthcare'
-  - name: Image Classification
-    tag: 'Image Classification'
-  - name: ImageNet
-    tag:  'ImageNet'
-  - name: Iris Dataset
-    tag: 'Iris Dataset'
-  - name: JavaScript
-    tag: 'JavaScript'
-  - name: k-NN
-    tag: 'k-NN'
   - name: Machine Learning
     tag: 'Machine Learning'
-  - name: Management Information Systems
-    tag: 'Management Information Systems'
-  - name: Model-View-Controller 
-    tag: 'Model-View-Controller'
-  - name: Natural Language Processing
-    tag: 'Natural Language Processing'
-  - name: Object-Oriented Programming 
-    tag: 'OOP'
-  - name: PostgreSQL
-    tag: 'PostgreSQL'
-  - name: PowerPoint 
-    tag: 'PowerPoint' 
-  - name: Predictive Analytics
-    tag: 'Predictive Analytics' 
-  - name: Python
-    tag: 'Python'
-  - name: R
-    tag: 'R'
-  - name: Requirements Gathering
-    tag: 'Requirements Gathering'
-  - name: ResNet-50
-    tag: 'ResNet-50'
-  - name: Retail
-    tag: 'Retail'
-  - name: Retroactive Search Trees
-    tag: 'Retroactive Search Trees'
-  - name: SAS
-    tag: 'SAS'
-  - name: Seq2Seq
-    tag: 'Seq2Seq'
-  - name: Statistical Modeling
-    tag: 'Statistical Modeling' 
-  - name: SQL
-    tag: 'SQL' 
-  - name: Tableau 
-    tag: 'Tableau'
-  - name: Technology
-    tag: 'Technology'
-  - name: Text Analytics
-    tag: 'Text Analytics'
-  - name: Transfer Learning
-    tag: 'Transfer Learning'
-  - name: UML
-    tag: 'UML'
-  - name: User Requirements 
-    tag: 'User Requirements'
-  - name: 'Version Control'
-    tag: 'Version Control'
+  - name: Software Engineering
+    tag: 'Software Engineering'
   - name: Web Apps
     tag: 'Web Apps'
-  - name: Word Embeddings
-    tag: 'Word Embeddings'
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
@@ -155,5 +61,5 @@ design:
   flip_alt_rows: true
 ---
 
-This section contains write-ups of data analytics projects. 
+This section contains write-ups of data analytics projects.
 

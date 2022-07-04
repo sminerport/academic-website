@@ -4,8 +4,8 @@
 title: "ATM Web Application"
 summary: "Implements an ATM web application using Python and the Flask micro web framework"
 authors: ["admin"]
-tags: ["Computer Science", "JavaScript", "Flask", "Finance", "Model-View-Controller", "OOP", "SQL", "Python", "UML", "Web Apps"]
-categories: ["Computer Science", "JavaScript", "Finance", "Model-View-Controller", "OOP", "SQL"]
+tags: ["Data Engineering", "Software Engineering", "Web Apps"]
+categories: ["Data Engineering", "Software Engineering", "Web Apps"]
 date: 2021-10-27T14:57:05-06:00
 
 # Optional external URL for project (replaces project detail page).

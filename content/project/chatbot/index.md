@@ -4,8 +4,8 @@
 title: "NLP Chatbot"
 summary: "Implements a chatbot in a customer service environment using Python, Flask, a Seq2Seq architecture, and pretrained word embeddings from GloVe (Global Vectors for Word Representation)"
 authors: ["admin"]
-tags: ["Artificial Intelligence", "Big Data", "Chatbot", "Computer Science", "Data Visualization", "Flask", "GloVe", "Machine Learning", "Natural Language Processing", "Python", "Predictive Analytics", "Retail", "Seq2Seq", "Technology", "Text Analytics", "Transfer Learning", "Word Embeddings", "Word Embeddings"  ]
-categories: ["Artificial Intelligence", "Big Data", "Chatbot", "Computer Science", "Data Visualization", "Flask"]
+tags: ["Artificial Intelligence", "Data Engineering", "Machine Learning", "Software Engineering", "Web Apps"]
+categories: ["Artificial Intelligence", "Data Engineering", "Machine Learning", "Software Engineering", "Web Apps"]
 date: 2021-11-05T11:07:11-06:00
 
 # Optional external URL for project (replaces project detail page).

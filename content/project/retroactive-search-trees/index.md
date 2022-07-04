@@ -4,8 +4,8 @@
 title: "Retroactive Search Trees"
 summary: "Investigates the performance differences between implementations of partially and fully retroactive binary search trees (BSTs) and their non-retroactive counterparts, along with simple rollback solutions"
 authors: ["admin"]
-tags: ["Artificial Intelligence", "Binary Search Trees", "Computer Science", "Data Structures", "Machine Learning", "Python", "Retroactive Search Trees","Statistical Modeling"]
-categories: ["Artificial Intelligence", "Binary Search Trees", "Computer Science", "Data Structures", "Machine Learning", "Python", "Retroactive Search Trees","Statistical Modeling"]
+tags: ["Algorithms", "Artificial Intelligence", "Machine Learning", "Python", "Software Engineering"]
+categories: ["Algorithms", "Artificial Intelligence", "Machine Learning", "Python", "Software Engineering"]
 date: 2021-11-05T21:19:15-06:00
 
 # Optional external URL for project (replaces project detail page).

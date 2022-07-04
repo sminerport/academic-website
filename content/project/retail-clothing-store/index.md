@@ -4,8 +4,8 @@
 title: "Retail Clothing Store"
 summary: "Provides recommendations for a clothing retailer to utilize more effective direct marketing techniques to increase sales and maximize profits"
 authors: ["admin"]
-tags: ["SAS", "Retail", "Business Analytics", "Statistical Modeling", "Management Information Systems", "Data Visualization", "Data Analytics", "Enterprise Performance Management"]
-categories: ["SAS", "Retail", "Business Analytics"]
+tags: ["Algorithms", "Artificial Intelligence", "Data Engineering", "Machine Learning", "Software Engineering" ]
+categories: ["Algorithms", "Artificial Intelligence", "Data Engineering", "Machine Learning", "Software Engineering" ]
 date: 2021-10-27T08:57:21-06:00
 
 # Optional external URL for project (replaces project detail page).

@@ -2,15 +2,15 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Importing Datasets from Scikit-Learn"
-subtitle: "Examining Gene Expressions in Mice Brains"
-summary: "Examining Gene Expressions in Mice Brains"
+subtitle: "A Basic Tutorial on Loading Datasets"
+summary: "A Basic Tutorial on Loading Datasets"
 authors: ["Scott Miner"]
-tags: ["datasets", "sklearn", "scikit-learn", "python"]
-categories: ["datasets", "sklearn", "scikit-learn", "python"]
-date: 2022-05-29T21:14:57.151260
-lastmod: 2022-05-29T21:14:57.151260
+tags: ["Datasets", "Python", "Scikit-Learn", "Sklearn"]
+categories: ["Datasets", "Python", "Scikit-Learn", "Sklearn"]
+date: 2022-05-29T00:45:31.110187
+lastmod: 2022-05-2904T00:45:31.110187
 featured: false
-draft: false
+draft: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -28,22 +28,24 @@ image:
 projects: []
 ---
 
+---
+
 This post talks about importing datasets from [Scikit-Learn](https://scikit-learn.org/).
 
 Let's import the `datasets` package. Also, we import NumPy to use the `np.unique()` function and others later.
 
 
-```python
-from sklearn import datasets
-import numpy as np
-```
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
 
 By running `dir(datasets)`, we see all the functions associated with this package.
 
 
-```python
-print(*[data for data in dir(datasets) if not data.startswith('_')])
-```
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">data</span> <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)])</span>
+</pre></div>
+
 
     clear_data_home dump_svmlight_file fetch_20newsgroups fetch_20newsgroups_vectorized fetch_california_housing fetch_covtype fetch_kddcup99 fetch_lfw_pairs fetch_lfw_people fetch_olivetti_faces fetch_openml fetch_rcv1 fetch_species_distributions get_data_home load_boston load_breast_cancer load_diabetes load_digits load_files load_iris load_linnerud load_sample_image load_sample_images load_svmlight_file load_svmlight_files load_wine make_biclusters make_blobs make_checkerboard make_circles make_classification make_friedman1 make_friedman2 make_friedman3 make_gaussian_quantiles make_hastie_10_2 make_low_rank_matrix make_moons make_multilabel_classification make_regression make_s_curve make_sparse_coded_signal make_sparse_spd_matrix make_sparse_uncorrelated make_spd_matrix make_swiss_roll
 
@@ -59,40 +61,40 @@ Finally, we can download datasets from the [openml.org](https://openml.org/) rep
 Say we were interested in downloading a dataset of the gene expressions in mice brains. We need to provide a name and a version to fully specify a dataset, though the version argument is optional.
 
 
-```python
-from sklearn.datasets import fetch_openml
-mice = fetch_openml(name='miceprotein', version=4)
-```
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_openml</span>
+<span class="n">mice</span> <span class="o">=</span> <span class="n">fetch_openml</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;miceprotein&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
 
 Let's learn more about this dataset.
 
 
-```python
-print('---------------')
-print('Description')
-print('---------------')
-print(mice.DESCR)
-print('---------------')
-print('Feature Names')
-print('---------------')
-print(mice.feature_names)
-print('---------------')
-print('Target Names')
-print('---------------')
-print(mice.target_names)
-print('---------------')
-print('Data')
-print('---------------')
-print(mice.data)
-print('---------------')
-print('Details')
-print('---------------')
-print(mice.details)
-print('---------------')
-print('URL')
-print('---------------')
-print(mice.url)
-```
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Description&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mice</span><span class="o">.</span><span class="n">DESCR</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Feature Names&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mice</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Target Names&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mice</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mice</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Details&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mice</span><span class="o">.</span><span class="n">details</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;URL&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mice</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+
 
     ---------------
     Description
@@ -193,7 +195,7 @@ print(mice.url)
     ---------------
     Details
     ---------------
-    {'id': '40966', 'name': 'MiceProtein', 'version': '4', 'description_version': '1', 'format': 'ARFF', 'upload_date': '2017-11-08T16:00:15', 'licence': 'Public', 'url': 'https://old.openml.org/data/v1/download/17928620/MiceProtein.arff', 'file_id': '17928620', 'default_target_attribute': 'class', 'row_id_attribute': 'MouseID', 'ignore_attribute': ['Genotype', 'Treatment', 'Behavior'], 'tag': ['OpenML-CC18', 'study_135', 'study_98', 'study_99'], 'visibility': 'public', 'minio_url': 'http://openml1.win.tue.nl/dataset40966/dataset_40966.pq', 'status': 'active', 'processing_date': '2018-10-04 00:49:58', 'md5_checksum': '3c479a6885bfa0438971388283a1ce32'}
+    {'id': '40966', 'name': 'MiceProtein', 'version': '4', 'description_version': '1', 'format': 'ARFF', 'upload_date': '2017-11-08T16:00:15', 'licence': 'Public', 'url': 'https://api.openml.org/data/v1/download/17928620/MiceProtein.arff', 'parquet_url': 'http://openml1.win.tue.nl/dataset40966/dataset_40966.pq', 'file_id': '17928620', 'default_target_attribute': 'class', 'row_id_attribute': 'MouseID', 'ignore_attribute': ['Genotype', 'Treatment', 'Behavior'], 'tag': ['OpenML-CC18', 'study_135', 'study_98', 'study_99'], 'visibility': 'public', 'minio_url': 'http://openml1.win.tue.nl/dataset40966/dataset_40966.pq', 'status': 'active', 'processing_date': '2018-10-04 00:49:58', 'md5_checksum': '3c479a6885bfa0438971388283a1ce32'}
     ---------------
     URL
     ---------------
@@ -204,12 +206,12 @@ We see below that the dataset contains 1,080 examples belonging to 8 different c
 
 
 
-```python
-print(f'Shape of features: {mice.data.shape}')
-print(f'Shape of target: {mice.target.shape}')
-print(f'Unique Targets: {np.unique(mice.target)}')
-print(f'Total targets: {len(np.unique(mice.target))}')
-```
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Shape of features: </span><span class="si">{</span><span class="n">mice</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Shape of target: </span><span class="si">{</span><span class="n">mice</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unique Targets: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">mice</span><span class="o">.</span><span class="n">target</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total targets: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">mice</span><span class="o">.</span><span class="n">target</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
 
     Shape of features: (1080, 77)
     Shape of target: (1080,)
@@ -229,15 +231,15 @@ print(f'Total targets: {len(np.unique(mice.target))}')
 We set the `return_counts` argument of the `np.unique()` function to `True` to get the number of occurrences per target variable. `np.column_stack(*tup*)` accepts a `tuple` as an argument and stacks 1-D arrays as columns into a 2-D array.
 
 
-```python
-unique, counts = np.unique(mice.target, return_counts=True)
-print(f'Unique pre-column stack: {unique}')
-print(f'Counts pre-column stack: {counts}')
-print(f'Unique shape: {unique.shape}')
-print(f'Counts shape: {counts.shape}')
-print(np.column_stack((unique, counts)))
-print(f'Stack shape: {np.column_stack((unique, counts)).shape}')
-```
+<div class="highlight"><pre><span></span><span class="n">unique</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">mice</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unique pre-column stack: </span><span class="si">{</span><span class="n">unique</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Counts pre-column stack: </span><span class="si">{</span><span class="n">counts</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unique shape: </span><span class="si">{</span><span class="n">unique</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Counts shape: </span><span class="si">{</span><span class="n">counts</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">unique</span><span class="p">,</span> <span class="n">counts</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Stack shape: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">unique</span><span class="p">,</span> <span class="n">counts</span><span class="p">))</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
 
     Unique pre-column stack: ['c-CS-m' 'c-CS-s' 'c-SC-m' 'c-SC-s' 't-CS-m' 't-CS-s' 't-SC-m' 't-SC-s']
     Counts pre-column stack: [150 135 150 135 135 105 135 135]
@@ -257,19 +259,19 @@ print(f'Stack shape: {np.column_stack((unique, counts)).shape}')
 Using this shape, we can use `matplotlib` to plot a bar graph of the counts per target variable occurrence.
 
 
-```python
-%matplotlib inline
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-mpl.rc('axes', labelsize=14)
-mpl.rc('xtick', labelsize=12)
-mpl.rc('ytick', labelsize=12)
-plt.bar(unique, counts)
-plt.title("Gene Expressions in Mice Brains")
-plt.xlabel("Target Variable")
-plt.ylabel("Counts")
-plt.show()
-```
+<div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">unique</span><span class="p">,</span> <span class="n">counts</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Gene Expressions in Mice Brains&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Target Variable&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Counts&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
 
 
 

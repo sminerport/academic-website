@@ -4,7 +4,8 @@ div.article-container {
 
 code.hljs.yaml,
 code.hljs.apache,
-code.hljs.css {
+code.hljs.css,
+code.hljs.swift {
   white-space: pre-wrap;
 }
 
@@ -80,13 +81,38 @@ span.linenos.special {
 .hljs-keyword,
 .hljs-comment,
 span.hljs-selector-tag,
-.hljs-class .hljs-title {
+.hljs-class .hljs-title,
+.hljs-type,
+.hljs-bullet {
   color: rgb(255, 255, 255);
 }
 
 img[alt=confusion-matrix] {
   width: 50%;
 }
+
+img[alt=cross-val] {
+  width: 50%;
+}
+
+.hljs-selector-tag,
+.hljs-class .hljs-title,
+.hljs-keyword {
+  font-weight: normal
+}
+
+.featured-image {
+  width: 50%
+}
+
+.medium-zoom-image {
+  margin: auto;
+}
+
+.caption {
+  font-size: 12px;
+}
+
 
 .highlight .hll {
   background-color: #ffffcc

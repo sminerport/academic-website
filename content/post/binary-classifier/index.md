@@ -5,10 +5,10 @@ title: "Training a Binary Classifier"
 subtitle: "Trains an SGD Classifier on the MNIST Dataset"
 summary: "Trains an SGD Classifier on the MNIST Dataset"
 authors: ["Scott Miner"]
-tags: ["Machine Learning", "Artificial Intelligence", "sklearn", "Python"]
-categories: ["Machine Learning", "Artificial Intelligence", "sklearn", "Python"]
-date: 2022-05-30T23:00:01.894514
-lastmod: 2022-05-30T23:00:01.894514
+tags: ["Machine Learning", "Artificial Intelligence", "Sklearn", "Scikit-Learn", "Python", "MNIST"]
+categories: ["Machine Learning", "Artificial Intelligence", "Sklearn", "Scikit-Learn", "Python", "MNIST"]
+date: 2022-05-30T01:24:19.362213
+lastmod: 2022-05-30T01:24:19.362213
 featured: false
 draft: false
 
@@ -31,35 +31,35 @@ projects: []
 This post discusses training a binary classifier on the MNIST dataset.
 
 
-```python
-import os
-%matplotlib inline
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-mpl.rc('axes', labelsize=14)
-mpl.rc('xtick', labelsize=12)
-mpl.rc('ytick', labelsize=12)
-# Where to save the figures
-PROJECT_ROOT_DIR = "."
-NOTEBOOK_NAME = "binary-classifier"
-IMAGES_PATH = os.path.join(PROJECT_ROOT_DIR, "images", NOTEBOOK_NAME)
-os.makedirs(IMAGES_PATH, exist_ok=True)
-
-def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=300):
-    path = os.path.join(IMAGES_PATH, fig_id + "." + fig_extension)
-    print("Saving figure", fig_id)
-    if tight_layout:
-        plt.tight_layout()
-    plt.savefig(path, format=fig_extension, dpi=resolution)
-```
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="c1"># Where to save the figures</span>
+<span class="n">PROJECT_ROOT_DIR</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span>
+<span class="n">NOTEBOOK_NAME</span> <span class="o">=</span> <span class="s2">&quot;binary-classifier&quot;</span>
+<span class="n">IMAGES_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PROJECT_ROOT_DIR</span><span class="p">,</span> <span class="s2">&quot;images&quot;</span><span class="p">,</span> <span class="n">NOTEBOOK_NAME</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">IMAGES_PATH</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><br><br><span class="k">def</span> <span class="nf">save_fig</span><span class="p">(</span><span class="n">fig_id</span><span class="p">,</span> <span class="n">tight_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fig_extension</span><span class="o">=</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">IMAGES_PATH</span><span class="p">,</span> <span class="n">fig_id</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="n">fig_extension</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saving figure&quot;</span><span class="p">,</span> <span class="n">fig_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">tight_layout</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">fig_extension</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="n">resolution</span><span class="p">)</span>
+</pre></div>
 
 
-```python
-# fetch the MNIST dataset
-from sklearn.datasets import fetch_openml
-mnist = fetch_openml('mnist_784', version=1, as_frame=False)
-mnist.keys()
-```
+The following takes a little over 1 minute to complete.
+
+
+<div class="highlight"><pre><span></span><span class="c1"># fetch the MNIST dataset</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_openml</span>
+<span class="n">mnist</span> <span class="o">=</span> <span class="n">fetch_openml</span><span class="p">(</span><span class="s1">&#39;mnist_784&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">as_frame</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">mnist</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
 
 
 
@@ -73,10 +73,10 @@ Let's look at the data shape.
 
 
 
-```python
-X, y = mnist["data"], mnist["target"]
-X.shape
-```
+<div class="highlight"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">mnist</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">],</span> <span class="n">mnist</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">]</span>
+<span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
 
 
 
@@ -86,9 +86,9 @@ X.shape
 
 
 
-```python
-y.shape
-```
+<div class="highlight"><pre><span></span><span class="n">y</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
 
 
 
@@ -98,9 +98,9 @@ y.shape
 
 
 
-```python
-28 * 28
-```
+<div class="highlight"><pre><span></span><span class="mi">28</span> <span class="o">*</span> <span class="mi">28</span>
+</pre></div>
+
 
 
 
@@ -112,9 +112,9 @@ y.shape
 The above shows that there are 70,000 images and that each picture has 784 features. The reason for this is that each image is 28x28 pixels. Each column represents one pixel's intensity from 0 (white) to 255 (black).
 
 
-```python
-X.dtype
-```
+<div class="highlight"><pre><span></span><span class="n">X</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+
 
 
 
@@ -124,10 +124,10 @@ X.dtype
 
 
 
-```python
-dt = y.dtype
-dt
-```
+<div class="highlight"><pre><span></span><span class="n">dt</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">dtype</span>
+<span class="n">dt</span>
+</pre></div>
+
 
 
 
@@ -137,9 +137,9 @@ dt
 
 
 
-```python
-dt.itemsize
-```
+<div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">itemsize</span>
+</pre></div>
+
 
 
 
@@ -149,9 +149,9 @@ dt.itemsize
 
 
 
-```python
-dt.name
-```
+<div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+
 
 
 
@@ -161,18 +161,18 @@ dt.name
 
 
 
-```python
-print(*[[feature for feature in mnist.feature_names][:5],[feature for feature in mnist.feature_names][-5:]])
-```
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="p">[[</span><span class="n">feature</span> <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">mnist</span><span class="o">.</span><span class="n">feature_names</span><span class="p">][:</span><span class="mi">5</span><span class="p">],[</span><span class="n">feature</span> <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">mnist</span><span class="o">.</span><span class="n">feature_names</span><span class="p">][</span><span class="o">-</span><span class="mi">5</span><span class="p">:]])</span>
+</pre></div>
+
 
     ['pixel1', 'pixel2', 'pixel3', 'pixel4', 'pixel5'] ['pixel780', 'pixel781', 'pixel782', 'pixel783', 'pixel784']
 
 
 
-```python
-import pandas as pd
-pd.DataFrame(mnist.data[0:1], columns=mnist.feature_names)
-```
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">mnist</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">mnist</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+</pre></div>
+
 
 
 
@@ -251,16 +251,16 @@ pd.DataFrame(mnist.data[0:1], columns=mnist.feature_names)
 
 
 
-```python
-import numpy as np
-unique, counts = np.unique(y, return_counts=True)
-print(np.c_[unique, counts])
-plt.bar(unique, counts)
-plt.title('MNIST Dataset')
-plt.xlabel('Target Class')
-plt.ylabel('Count')
-plt.show()
-```
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">unique</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">unique</span><span class="p">,</span> <span class="n">counts</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">unique</span><span class="p">,</span> <span class="n">counts</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;MNIST Dataset&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Target Class&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
 
     [['0' 6903]
      ['1' 7877]
@@ -283,19 +283,15 @@ plt.show()
 Let's print one of the digits.
 
 
-```python
-%matplotlib inline
-import matplotlib as mpl
-import matplotlib.pyplot as plt
+<div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span><br><br><span class="n">some_digit</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">some_digit_image</span> <span class="o">=</span> <span class="n">some_digit</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">some_digit_image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">binary</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span><br><br><span class="n">save_fig</span><span class="p">(</span><span class="s2">&quot;some_digit_plot&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 
-some_digit = X[0]
-some_digit_image = some_digit.reshape(28, 28)
-plt.imshow(some_digit_image, cmap=mpl.cm.binary)
-plt.axis("off")
-
-save_fig("some_digit_plot")
-plt.show()
-```
 
     Saving figure some_digit_plot
 
@@ -307,9 +303,9 @@ plt.show()
 
 
 
-```python
-y[0]
-```
+<div class="highlight"><pre><span></span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
 
 
 
@@ -319,46 +315,40 @@ y[0]
 
 
 
-```python
-y = y.astype(np.uint8)
-```
+<div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+</pre></div>
+
 
 Let's look at some more images from the dataset.
 
 
-```python
-def plot_digits(instances, images_per_row=10, **options):
-    size = 28
-    images_per_row = min(len(instances), images_per_row)
-    # This is equivalent to n_rows = ceil(len(instances) / images_per_row):
-    n_rows = (len(instances) - 1) // images_per_row + 1
-
-    # Append empty images to fill the end of the grid, if needed:
-    n_empty = n_rows * images_per_row - len(instances)
-    padded_instances = np.concatenate([instances, np.zeros((n_empty, size * size))], axis=0)
-
-    # Reshape the array so it's organized as a grid containing 28×28 images:
-    image_grid = padded_instances.reshape((n_rows, images_per_row, size, size))
-
-    # Combine axes 0 and 2 (vertical image grid axis, and vertical image axis),
-    # and axes 1 and 3 (horizontal axes). We first need to move the axes that we
-    # want to combine next to each other, using transpose(), and only then we
-    # can reshape:
-    big_image = image_grid.transpose(0, 2, 1, 3).reshape(n_rows * size,
-                                                         images_per_row * size)
-    # Now that we have a big image, we just need to show it:
-    plt.imshow(big_image, cmap = mpl.cm.binary, **options)
-    plt.axis("off")
-```
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_digits</span><span class="p">(</span><span class="n">instances</span><span class="p">,</span> <span class="n">images_per_row</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">):</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="mi">28</span>
+    <span class="n">images_per_row</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">instances</span><span class="p">),</span> <span class="n">images_per_row</span><span class="p">)</span>
+    <span class="c1"># This is equivalent to n_rows = ceil(len(instances) / images_per_row):</span>
+    <span class="n">n_rows</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">instances</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">images_per_row</span> <span class="o">+</span> <span class="mi">1</span><br><br>    <span class="c1"># Append empty images to fill the end of the grid, if needed:</span>
+    <span class="n">n_empty</span> <span class="o">=</span> <span class="n">n_rows</span> <span class="o">*</span> <span class="n">images_per_row</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">instances</span><span class="p">)</span>
+    <span class="n">padded_instances</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">instances</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_empty</span><span class="p">,</span> <span class="n">size</span> <span class="o">*</span> <span class="n">size</span><span class="p">))],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><br><br>    <span class="c1"># Reshape the array so it&#39;s organized as a grid containing 28×28 images:</span>
+    <span class="n">image_grid</span> <span class="o">=</span> <span class="n">padded_instances</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_rows</span><span class="p">,</span> <span class="n">images_per_row</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span><br><br>    <span class="c1"># Combine axes 0 and 2 (vertical image grid axis, and vertical image axis),</span>
+    <span class="c1"># and axes 1 and 3 (horizontal axes). We first need to move the axes that we</span>
+    <span class="c1"># want to combine next to each other, using transpose(), and only then we</span>
+    <span class="c1"># can reshape:</span>
+    <span class="n">big_image</span> <span class="o">=</span> <span class="n">image_grid</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_rows</span> <span class="o">*</span> <span class="n">size</span><span class="p">,</span>
+                                                         <span class="n">images_per_row</span> <span class="o">*</span> <span class="n">size</span><span class="p">)</span>
+    <span class="c1"># Now that we have a big image, we just need to show it:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">big_image</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">binary</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+</pre></div>
 
 
-```python
-plt.figure(figsize=(18,18))
-example_images = X[0:200]
-plot_digits(example_images, images_per_row=10)
-save_fig("more_digits_plot")
-plt.show()
-```
+
+<div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">18</span><span class="p">))</span>
+<span class="n">example_images</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">200</span><span class="p">]</span>
+<span class="n">plot_digits</span><span class="p">(</span><span class="n">example_images</span><span class="p">,</span> <span class="n">images_per_row</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">save_fig</span><span class="p">(</span><span class="s2">&quot;more_digits_plot&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
 
     Saving figure more_digits_plot
 
@@ -372,18 +362,18 @@ plt.show()
 The MNIST dataset is split into a training (the first 60,000 images) and a test set (the last 10,000 images).
 
 
-```python
-X_train, X_test, y_train, y_test = X[:60000], X[60000:], y[:60000], y[60000:]
-```
+<div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:</span><span class="mi">60000</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="mi">60000</span><span class="p">:],</span> <span class="n">y</span><span class="p">[:</span><span class="mi">60000</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">60000</span><span class="p">:]</span>
+</pre></div>
+
 
 Next, we shuffle the training set, guaranteeing that all cross-validation folds are similar and not missing any digits. Also, some algorithms are sensitive to the order of training instances. However, shuffling is bad when working on time-series data, such as stock market prices and weather conditions.
 
 
-```python
-np.random.seed(42)
-shuffle_index = np.random.permutation(60000)
-shuffle_index
-```
+<div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">shuffle_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="mi">60000</span><span class="p">)</span>
+<span class="n">shuffle_index</span>
+</pre></div>
+
 
 
 
@@ -393,9 +383,16 @@ shuffle_index
 
 
 
-```python
-X_train, y_train = X_train[shuffle_index], y_train[shuffle_index]
-```
+<div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="n">shuffle_index</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[</span><span class="n">shuffle_index</span><span class="p">]</span>
+<span class="o">%</span><span class="n">store</span> <span class="n">X_train</span> <span class="n">X_test</span> <span class="n">y_train</span> <span class="n">y_test</span>
+</pre></div>
+
+
+    Stored 'X_train' (ndarray)
+    Stored 'X_test' (ndarray)
+    Stored 'y_train' (ndarray)
+    Stored 'y_test' (ndarray)
+
 
 Let's simplify the problem and only try to identify the number five, an example of a *binary classifier*. Binary classifiers distinguish between just two classes. In this instance, five and not five. We need to create target vectors for the classification task.
 
@@ -403,24 +400,26 @@ The below code creates a boolean NumPy array for both the training and test sets
 
 
 
-```python
-y_train_5 = (y_train == 5)
-y_test_5 = (y_test == 5)
-print(type(y_train_5))
-print(type(y_test_5))
-```
+<div class="highlight"><pre><span></span><span class="n">y_train_5</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_train</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">y_test_5</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">y_train_5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">y_test_5</span><span class="p">))</span><br><br><span class="o">%</span><span class="n">store</span> <span class="n">y_train_5</span> <span class="n">y_test_5</span>
+</pre></div>
+
 
     <class 'numpy.ndarray'>
     <class 'numpy.ndarray'>
+    Stored 'y_train_5' (ndarray)
+    Stored 'y_test_5' (ndarray)
 
 
 Let's use `np.flatnonzero()` to check that we correctly set up the boolean NumPy arrays for the target variable in both training and test sets. `np.flatnonzero()` returns indices of the non-zero elements of an input array and is equivalent to `np.nonzero(np.ravel(a))[0]`. `np.ravel()` returns a 1-D array containing the input array elements.
 
 
-```python
-# the indices of the true values in the y_train_5 NumPy array
-np.flatnonzero(y_train_5)
-```
+<div class="highlight"><pre><span></span><span class="c1"># the indices of the true values in the y_train_5 NumPy array</span>
+<span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">y_train_5</span><span class="p">)</span>
+</pre></div>
+
 
 
 
@@ -432,9 +431,9 @@ np.flatnonzero(y_train_5)
 Let's confirm the values that we expect to be true are true and vice versa.
 
 
-```python
-y_train_5[[7, 8, 11, 25, 26]]
-```
+<div class="highlight"><pre><span></span><span class="n">y_train_5</span><span class="p">[[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">]]</span>
+</pre></div>
+
 
 
 
@@ -446,10 +445,10 @@ y_train_5[[7, 8, 11, 25, 26]]
 We can use `np.concatenate()` to look at the test dataset's first five and last five indices.
 
 
-```python
-y_test_5 = (y_test == 5)
-np.concatenate((np.flatnonzero(y_test_5)[:5], np.flatnonzero(y_test_5)[-5:]))
-```
+<div class="highlight"><pre><span></span><span class="n">y_test_5</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">y_test_5</span><span class="p">)[:</span><span class="mi">5</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">y_test_5</span><span class="p">)[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]))</span>
+</pre></div>
+
 
 
 
@@ -462,9 +461,9 @@ np.concatenate((np.flatnonzero(y_test_5)[:5], np.flatnonzero(y_test_5)[-5:]))
 Again, let's confirm these indices give us the values we expect.
 
 
-```python
-y_test_5[[8, 9, 23, 26, 9941, 9970]]
-```
+<div class="highlight"><pre><span></span><span class="n">y_test_5</span><span class="p">[[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">9941</span><span class="p">,</span> <span class="mi">9970</span><span class="p">]]</span>
+</pre></div>
+
 
 
 
@@ -476,25 +475,22 @@ y_test_5[[8, 9, 23, 26, 9941, 9970]]
 Now we can pick a classifier and train it. *Stochastic Gradient Descent* (SGD) is a good place to start. The classifier can handle very large datasets efficiently since it deals with training instances independently, one at a time, making SGD well suited for _online learning_. Let's create an `SGDClassifier` and train it on the whole training set.
 
 
-```python
-from sklearn.linear_model import SGDClassifier
-sgd_clf = SGDClassifier(random_state=42)
-sgd_clf.fit(X_train, y_train_5)
-```
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">SGDClassifier</span>
+<span class="n">sgd_clf</span> <span class="o">=</span> <span class="n">SGDClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">sgd_clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train_5</span><span class="p">)</span>
+<span class="o">%</span><span class="n">store</span> <span class="n">sgd_clf</span>
+</pre></div>
 
 
-
-
-    SGDClassifier(random_state=42)
-
+    Stored 'sgd_clf' (SGDClassifier)
 
 
 Now you can use the classifier to detect images of the number 5:
 
 
-```python
-sgd_clf.predict([some_digit])
-```
+<div class="highlight"><pre><span></span><span class="n">sgd_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">some_digit</span><span class="p">])</span>
+</pre></div>
+
 
 
 
@@ -506,11 +502,11 @@ sgd_clf.predict([some_digit])
 In this case, the classifier guesses correct. The image represents a 5. Let's print the digit once more so that we remember.
 
 
-```python
-plt.imshow(some_digit_image, cmap=mpl.cm.binary)
-plt.axis("off")
-plt.show()
-```
+<div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">some_digit_image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">binary</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
 
 
 

@@ -3,7 +3,8 @@ div.article-container {
 }
 
 code.hljs.yaml,
-code.hljs.apache {
+code.hljs.apache,
+code.hljs.css {
   white-space: pre-wrap;
 }
 
@@ -78,7 +79,8 @@ span.linenos.special {
 .hljs-meta,
 .hljs-keyword,
 .hljs-comment,
-span.hljs-selector-tag {
+span.hljs-selector-tag,
+.hljs-class .hljs-title {
   color: rgb(255, 255, 255);
 }
 

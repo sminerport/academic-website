@@ -102,6 +102,13 @@ span.hljs-meta {
   font-weight: normal
 }
 
+mjx-container[jax="CHTML"][display="true"] {
+    display: flow-root;
+    text-align: center;
+    margin: 1em 0;
+    overflow-x: scroll;
+}
+
 .featured-image {
   width: 66%
 }

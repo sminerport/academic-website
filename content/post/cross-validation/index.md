@@ -2,13 +2,13 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Evaluating a Binary Classifier"
-subtitle: "Evaluates a Binary Classifier Using Cross-Validation"
-summary: "Evaluates a Binary Classifier Using Cross-Validation"
+subtitle: "Uses Cross-Validation to Evaluate a Binary Classifier"
+summary: "Uses Cross-Validation to Evaluate a Binary Classifier"
 authors: ["Scott Miner"]
-tags: ["Cross-Validation", "Machine Learning", "Artificial Intelligence", "sklearn", "scikit-learn"]
-categories: ["Cross-Validation", "Machine Learning", "Artificial Intelligence", "sklearn", "scikit-learn"]
-date: 2022-06-11T23:38:41.373739
-lastmod: 2022-06-11T23:38:41.373739
+tags: ["Cross-Validation", "Machine Learning", "Artificial Intelligence", "Sklearn", "Scikit-Learn", "Python"]
+categories: ["Cross-Validation", "Machine Learning", "Artificial Intelligence", "Sklearn", "Scikit-Learn", "Python"]
+date: 2022-06-12T02:14:35.066313
+lastmod: 2022-06-12T02:14:35.066313
 featured: false
 draft: false
 
@@ -50,42 +50,45 @@ The solution is to use cross-validation. When performing cross-validation, the v
 
 The performance measure reported by *k*-fold CV is the average of the values computed in the loop. *k*-fold CV is computationally expensive but offers a significant advantage in problems like inverse inference when sample sizes are small. Also, the process does not waste as much data as fixing an arbitrary validation set. Last but not least, *k*-fold CV allows us to get not only an estimate of the model's performance but also a measure of how precise that estimate is (i.e., standard deviation). We would not have this information with only one validation set. Figure 1 depicts *k*-fold CV.
 
-![](./images-md/grid_search_cross_validation.png)<center>
-[Fig. 1 Cross Validation](https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation)</center>
+![cross-val](./images-md/grid_search_cross_validation.png)<center>
+<div class="caption">
+
+Figure 1. [Cross Validation](https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation)
+</center></div>
 
 Let's look at a simple example of *k*-fold CV using `cross_val_score()` from `sklearn`.
 
 
-```python
-from sklearn.model_selection import cross_val_score
-from sklearn import datasets, linear_model
-diabetes = datasets.load_diabetes()
-X = diabetes.data[:150]
-y = diabetes.target[:150]
-lasso = linear_model.Lasso()
-scores = cross_val_score(lasso, X, y, cv=3)
-```
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">linear_model</span>
+<span class="n">diabetes</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_diabetes</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">diabetes</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="mi">150</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">diabetes</span><span class="o">.</span><span class="n">target</span><span class="p">[:</span><span class="mi">150</span><span class="p">]</span>
+<span class="n">lasso</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">Lasso</span><span class="p">()</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lasso</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
 
 Below are all the functions available on the `scores` object, including the `mean` and `std`.
 
 
-```python
-print(*[x for x in dir(scores) if not x.startswith('_')])
-```
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)])</span>
+</pre></div>
+
 
     T all any argmax argmin argpartition argsort astype base byteswap choose clip compress conj conjugate copy ctypes cumprod cumsum data diagonal dot dtype dump dumps fill flags flat flatten getfield imag item itemset itemsize max mean min nbytes ndim newbyteorder nonzero partition prod ptp put ravel real repeat reshape resize round searchsorted setfield setflags shape size sort squeeze std strides sum swapaxes take tobytes tofile tolist tostring trace transpose var view
 
 
 
-```python
-print(f'Scores: {scores}')
-print(f'Mean: {scores.mean()}')
-print(f'Standard Deviation: {scores.std()}')
-```
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Scores: </span><span class="si">{</span><span class="n">scores</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Mean: </span><span class="si">{</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Standard Deviation: </span><span class="si">{</span><span class="n">scores</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
 
-    Scores: [0.33150734 0.08022311 0.03531764]
-    Mean: 0.14901602799979094
-    Standard Deviation: 0.1303365724319238
+
+    Scores: [0.3315057  0.08022103 0.03531816]
+    Mean: 0.14901496176589216
+    Standard Deviation: 0.13033602441858105
 
 
 (The model does not perform that well.)
@@ -99,20 +102,18 @@ Sometimes we may need more control over the CV process than a function like `cro
 `StratifiedKFold` is a variation of *k*-fold CV that returns *stratified* folds. In stratified folds, each fold contains approximately the same percentage of samples for each class. Let's take a look at a simple example. `StratifiedKFold` provides train/test indices to split data into train/test sets.
 
 
-```python
-import numpy as np
-import pandas as pd
-from sklearn.model_selection import StratifiedKFold
-X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])
-y = np.array([0, 0, 1, 1])
-original_data = pd.DataFrame(np.c_[X, y], columns=['Feature1', 'Feature2',
-                                                   'Target'], index=['index_0', 'index_1', 'index_2', 'index_3'])
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedKFold</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">original_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Feature1&#39;</span><span class="p">,</span> <span class="s1">&#39;Feature2&#39;</span><span class="p">,</span> <span class="s1">&#39;Target&#39;</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span>
+                             <span class="s1">&#39;index_0&#39;</span><span class="p">,</span> <span class="s1">&#39;index_1&#39;</span><span class="p">,</span> <span class="s1">&#39;index_2&#39;</span><span class="p">,</span> <span class="s1">&#39;index_3&#39;</span><span class="p">])</span><br><br><span class="n">display</span><span class="p">(</span><span class="n">original_data</span><span class="p">)</span>
+<span class="n">skf</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of splits: </span><span class="si">{</span><span class="n">skf</span><span class="o">.</span><span class="n">get_n_splits</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">skf</span><span class="p">)</span>
+</pre></div>
 
-display(original_data)
-skf = StratifiedKFold(n_splits=2)
-print(f'Number of splits: {skf.get_n_splits(X, y)}')
-print(skf)
-```
 
 
 <div>
@@ -176,29 +177,29 @@ The `split()` method of a cross-validation object yields two $n$-dimensional arr
 
 
 
-```python
-import pandas as pd
-print('Original Dataset')
-display(original_data)
-for fold, (train_index, test_index) in enumerate(skf.split(X, y), 1):
-    print('---')
-    print()
-    print(f'Fold #{fold}:')
-    print(f'TRAIN_INDEX: {train_index} TEST_INDEX: {test_index}')
-    print()
-    X_train_ex, X_test_ex = X[train_index], X[test_index]
-    y_train_ex, y_test_ex = y[train_index], y[test_index]
-    print('---')
-    print()
-    print('Training Set')
-    display(pd.DataFrame(np.c_[X_train_ex, y_train_ex.T],
-                         columns=['Feature1', 'Feature2', 'Target'],
-                         index=['Sample1', 'Sample2']))
-    print('Testing Set')
-    display(pd.DataFrame(np.c_[X_test_ex, y_test_ex.T],
-                         columns=['Feature1', 'Feature2', 'Target'],
-                         index=['Sample1', 'Sample2']))
-```
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Original Dataset&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">original_data</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">fold</span><span class="p">,</span> <span class="p">(</span><span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">skf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Fold #</span><span class="si">{</span><span class="n">fold</span><span class="si">}</span><span class="s1">:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;TRAIN_INDEX: </span><span class="si">{</span><span class="n">train_index</span><span class="si">}</span><span class="s1"> TEST_INDEX: </span><span class="si">{</span><span class="n">test_index</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="n">X_train_ex</span><span class="p">,</span> <span class="n">X_test_ex</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+    <span class="n">y_train_ex</span><span class="p">,</span> <span class="n">y_test_ex</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Training Set&#39;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">X_train_ex</span><span class="p">,</span> <span class="n">y_train_ex</span><span class="o">.</span><span class="n">T</span><span class="p">],</span>
+                         <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Feature1&#39;</span><span class="p">,</span> <span class="s1">&#39;Feature2&#39;</span><span class="p">,</span> <span class="s1">&#39;Target&#39;</span><span class="p">],</span>
+                         <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Sample1&#39;</span><span class="p">,</span> <span class="s1">&#39;Sample2&#39;</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Testing Set&#39;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">X_test_ex</span><span class="p">,</span> <span class="n">y_test_ex</span><span class="o">.</span><span class="n">T</span><span class="p">],</span>
+                         <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Feature1&#39;</span><span class="p">,</span> <span class="s1">&#39;Feature2&#39;</span><span class="p">,</span> <span class="s1">&#39;Target&#39;</span><span class="p">],</span>
+                         <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Sample1&#39;</span><span class="p">,</span> <span class="s1">&#39;Sample2&#39;</span><span class="p">]))</span>
+</pre></div>
+
 
     Original Dataset
 
@@ -462,10 +463,10 @@ We can use `np.bincount()` to compare stratified and non-stratified *k*-fold cro
 First, let's take a closer look at `np.bincount()`. The function `np.bincount()` counts the number of occurrences of each value in an array of non-negative integers.
 
 
-```python
-print(np.arange(5))
-print(np.bincount(np.arange(5)))
-```
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
+</pre></div>
+
 
     [0 1 2 3 4]
     [1 1 1 1 1]
@@ -474,20 +475,20 @@ print(np.bincount(np.arange(5)))
 Each value in the initial array occurs once, which the output from `np.bincount()` demonstrates. The numbers in the array correspond to the counts of the original value. The indices represent the values of the original array. Let's look at another example.
 
 
-```python
-print(np.array([0, 1, 1, 3, 2, 1, 7]))
-print(np.bincount(np.array([0, 1, 1, 3, 2, 1, 7])))
-```
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">])))</span>
+</pre></div>
+
 
     [0 1 1 3 2 1 7]
     [1 3 1 1 0 0 0 1]
 
 
 
-```python
-print(np.array([0, 1, 1, 3, 2, 1, 7]))
-print(np.bincount(np.array([0, 1, 1, 3, 2, 1, 7])))
-```
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">])))</span>
+</pre></div>
+
 
     [0 1 1 3 2 1 7]
     [1 3 1 1 0 0 0 1]
@@ -497,10 +498,10 @@ The number of bins (of size 1) is one larger than the largest value in the array
 
 
 
-```python
-x = np.array([0, 1, 1, 3, 2, 1, 7, 23])
-np.bincount(x).size == np.amax(x) + 1
-```
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">23</span><span class="p">])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
 
 
 
@@ -517,17 +518,15 @@ Let's use `np.bincount()` to compare stratified and non-stratified *k*-fold CV u
 
 
 
-```python
-from sklearn.model_selection import StratifiedKFold, KFold
-import numpy as np
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedKFold</span><span class="p">,</span> <span class="n">KFold</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><br><br><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(([</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">45</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;X.shape: </span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;First five rows of Features: </span><span class="se">\n</span><span class="si">{</span><span class="n">X</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;y.shape: </span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;First and last five indices of target variable&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">y</span><span class="p">[:</span><span class="mi">5</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]),</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">))</span>
+</pre></div>
 
-X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))
-print(f'X.shape: {X.shape}')
-print(f'First five rows of Features: \n{X[:5]}')
-print(f'y.shape: {y.shape}')
-print('First and last five indices of target variable')
-print(np.concatenate((y[:5], y[-5:]), axis=None))
-```
 
     X.shape: (50, 1)
     First five rows of Features:
@@ -544,12 +543,11 @@ print(np.concatenate((y[:5], y[-5:]), axis=None))
 Notice the difference in the shapes of the `X` and `y` $n$-dimensional arrays. The shape of `X` is `(50, 1)`, which correlates to 50 rows and 1 column. The shape of `y`, on the other hand, is `(50,)`. In the latter case, the array is 1-dimensional and is otherwise known as a vector. In the former case, the array is a 2-dimensional array.
 
 
-```python
-skf = StratifiedKFold(n_splits=3)
-for train, test in skf.split(X, y):
-    print(f'train - {np.bincount(y[train])} | test - {np.bincount(y[test])}')
+<div class="highlight"><pre><span></span><span class="n">skf</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">skf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;train - </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">train</span><span class="p">])</span><span class="si">}</span><span class="s1"> | test - </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">test</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
 
-```
 
     train - [30  3] | test - [15  2]
     train - [30  3] | test - [15  2]
@@ -557,12 +555,11 @@ for train, test in skf.split(X, y):
 
 
 
-```python
-kf = KFold(n_splits=3)
-for train, test in kf.split(X, y):
-    print(f'train - {np.bincount(y[train])} | test - {np.bincount(y[test])}')
+<div class="highlight"><pre><span></span><span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">kf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;train - </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">train</span><span class="p">])</span><span class="si">}</span><span class="s1"> | test - </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">test</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
 
-```
 
     train - [28  5] | test - [17]
     train - [28  5] | test - [17]
@@ -580,83 +577,62 @@ We can visualize the behavior of *k*-fold, stratified *k*-fold, and group *k*-fo
 
 
 
-```python
-"""
-Visualizing cross-validation behavior in scikit-learn
-=====================================================
-
-Choosing the right cross-validation object is a crucial part of fitting a
-model properly. There are many ways to split data into training and test
-sets in order to avoid model overfitting, to standardize the number of
-groups in test sets, etc.
-
-This example visualizes the behavior of several common scikit-learn objects
-for comparison.
-
-"""
-
-import numpy.random as rng
-from sklearn.model_selection import (
-    KFold,
-    StratifiedKFold,
-    GroupKFold
-)
-
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.patches import Patch
-
-rng = np.random.RandomState(1338)
-cmap_data = plt.cm.Paired
-cmap_cv = plt.cm.coolwarm
-n_splits = 4
-# Generate the class/group data
-n_points = 100
-X = rng.randn(100, 10)
-
-percentiles_classes = [0.1, 0.3, 0.6]
-y = np.hstack([[ii] * int(100 * perc)
-               for ii, perc in enumerate(percentiles_classes)])
-
-# Generate uneven groups
-group_prior = rng.dirichlet([2] * 10)
-groups = np.repeat(np.arange(10), rng.multinomial(100, group_prior))
-
-
-def visualize_groups(classes, groups, name):
-    # Visualize dataset groups
-    fig, ax = plt.subplots()
-    ax.scatter(
-        range(len(groups)),
-        [0.5] * len(groups),
-        c=groups,
-        marker="_",
-        lw=50,
-        cmap=cmap_data,
-    )
-    ax.scatter(
-        range(len(groups)),
-        [3.5] * len(groups),
-        c=classes,
-        marker="_",
-        lw=50,
-        cmap=cmap_data,
-    )
-    ax.set(
-        ylim=[-1, 5],
-        yticks=[0.5, 3.5],
-        yticklabels=["Data\ngroup", "Data\nclass"],
-        xlabel="Sample index",
-    )
-
-
-visualize_groups(y, groups, "no groups")
-
-```
+<div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Visualizing cross-validation behavior in scikit-learn</span>
+<span class="sd">=====================================================</span><br><br><span class="sd">Choosing the right cross-validation object is a crucial part of fitting a</span>
+<span class="sd">model properly. There are many ways to split data into training and test</span>
+<span class="sd">sets in order to avoid model overfitting, to standardize the number of</span>
+<span class="sd">groups in test sets, etc.</span><br><br><span class="sd">This example visualizes the behavior of several common scikit-learn objects</span>
+<span class="sd">for comparison.</span><br><br><span class="sd">&quot;&quot;&quot;</span><br><br><span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">rng</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">KFold</span><span class="p">,</span>
+    <span class="n">StratifiedKFold</span><span class="p">,</span>
+    <span class="n">GroupKFold</span>
+<span class="p">)</span><br><br><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Patch</span><br><br><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">1338</span><span class="p">)</span>
+<span class="n">cmap_data</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Paired</span>
+<span class="n">cmap_cv</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
+<span class="n">n_splits</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="c1"># Generate the class/group data</span>
+<span class="n">n_points</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><br><br><span class="n">percentiles_classes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([[</span><span class="n">ii</span><span class="p">]</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">perc</span><span class="p">)</span>
+               <span class="k">for</span> <span class="n">ii</span><span class="p">,</span> <span class="n">perc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">percentiles_classes</span><span class="p">)])</span><br><br><span class="c1"># Generate uneven groups</span>
+<span class="n">group_prior</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">dirichlet</span><span class="p">([</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">groups</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">rng</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">group_prior</span><span class="p">))</span><br><br>
+<span class="k">def</span> <span class="nf">visualize_groups</span><span class="p">(</span><span class="n">classes</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="c1"># Visualize dataset groups</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">groups</span><span class="p">)),</span>
+        <span class="p">[</span><span class="mf">0.5</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">groups</span><span class="p">),</span>
+        <span class="n">c</span><span class="o">=</span><span class="n">groups</span><span class="p">,</span>
+        <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">,</span>
+        <span class="n">lw</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_data</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">groups</span><span class="p">)),</span>
+        <span class="p">[</span><span class="mf">3.5</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">groups</span><span class="p">),</span>
+        <span class="n">c</span><span class="o">=</span><span class="n">classes</span><span class="p">,</span>
+        <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">,</span>
+        <span class="n">lw</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_data</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+        <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+        <span class="n">yticks</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">],</span>
+        <span class="n">yticklabels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Data</span><span class="se">\n</span><span class="s2">group&quot;</span><span class="p">,</span> <span class="s2">&quot;Data</span><span class="se">\n</span><span class="s2">class&quot;</span><span class="p">],</span>
+        <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Sample index&quot;</span><span class="p">,</span>
+    <span class="p">)</span><br><br>
+<span class="n">visualize_groups</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="s2">&quot;no groups&quot;</span><span class="p">)</span>
+</pre></div>
 
 
 
-![png](output_25_0.png)
+
+![png](output_24_0.png)
 
 
 
@@ -667,66 +643,55 @@ visualize_groups(y, groups, "no groups")
 Let's define a function that visualizes the behavior of each cross-validation object. We perform four splits of the data. We'll visualize the indices chosen for the training set (in blue) and the test set (in red) on each fold.
 
 
-```python
-def plot_cv_indices(cv, X, y, group, ax, n_splits, lw=10):
-    """Create a sample plot for indices of a cross-validation object."""
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_cv_indices</span><span class="p">(</span><span class="n">cv</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">n_splits</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a sample plot for indices of a cross-validation object.&quot;&quot;&quot;</span><br><br>    <span class="c1"># Generate the training/testing visualizations for each CV split</span>
+    <span class="k">for</span> <span class="n">ii</span><span class="p">,</span> <span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">tt</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="n">group</span><span class="p">)):</span>
+        <span class="c1"># Fill in indices with the training/test groups</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+        <span class="n">indices</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">indices</span><span class="p">[</span><span class="n">tr</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><br><br>        <span class="c1"># Visualize the results</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+            <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)),</span>
+            <span class="p">[</span><span class="n">ii</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">),</span>
+            <span class="n">c</span><span class="o">=</span><span class="n">indices</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">,</span>
+            <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_cv</span><span class="p">,</span>
+            <span class="n">vmin</span><span class="o">=-</span><span class="mf">0.2</span><span class="p">,</span>
+            <span class="n">vmax</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span>
+        <span class="p">)</span><br><br>    <span class="c1"># Plot the data classes and groups at the end</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)),</span> <span class="p">[</span><span class="n">ii</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_data</span>
+    <span class="p">)</span><br><br>    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)),</span> <span class="p">[</span><span class="n">ii</span> <span class="o">+</span> <span class="mf">2.5</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">c</span><span class="o">=</span><span class="n">group</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_data</span>
+    <span class="p">)</span><br><br>    <span class="c1"># Formatting</span>
+    <span class="n">yticklabels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n_splits</span><span class="p">))</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">,</span> <span class="s2">&quot;group&quot;</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+        <span class="n">yticks</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_splits</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">yticklabels</span><span class="o">=</span><span class="n">yticklabels</span><span class="p">,</span>
+        <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Sample index&quot;</span><span class="p">,</span>
+        <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;CV iteration&quot;</span><span class="p">,</span>
+        <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="n">n_splits</span> <span class="o">+</span> <span class="mf">2.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">],</span>
+        <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cv</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ax</span>
+</pre></div>
 
-    # Generate the training/testing visualizations for each CV split
-    for ii, (tr, tt) in enumerate(cv.split(X=X, y=y, groups=group)):
-        # Fill in indices with the training/test groups
-        indices = np.array([np.nan] * len(X))
-        indices[tt] = 1
-        indices[tr] = 0
-
-        # Visualize the results
-        ax.scatter(
-            range(len(indices)),
-            [ii + 0.5] * len(indices),
-            c=indices,
-            marker="_",
-            lw=lw,
-            cmap=cmap_cv,
-            vmin=-0.2,
-            vmax=1.2,
-        )
-
-    # Plot the data classes and groups at the end
-    ax.scatter(
-        range(len(X)), [ii + 1.5] * len(X), c=y, marker="_", lw=lw, cmap=cmap_data
-    )
-
-    ax.scatter(
-        range(len(X)), [ii + 2.5] * len(X), c=group, marker="_", lw=lw, cmap=cmap_data
-    )
-
-    # Formatting
-    yticklabels = list(range(n_splits)) + ["class", "group"]
-    ax.set(
-        yticks=np.arange(n_splits + 2) + 0.5,
-        yticklabels=yticklabels,
-        xlabel="Sample index",
-        ylabel="CV iteration",
-        ylim=[n_splits + 2.2, -0.2],
-        xlim=[0, 100],
-    )
-    ax.set_title("{}".format(type(cv).__name__), fontsize=15)
-    return ax
-
-```
 
 Let's take a look at the `KFold` cross-validation object:
 
 
-```python
-fig, ax = plt.subplots()
-cv = KFold(n_splits)
-plot_cv_indices(cv, X, y, groups, ax, n_splits)
-plt.show()
-```
+<div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">cv</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="p">)</span>
+<span class="n">plot_cv_indices</span><span class="p">(</span><span class="n">cv</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">n_splits</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 
 
 
-![png](output_30_0.png)
+
+![png](output_29_0.png)
 
 
 
@@ -738,38 +703,35 @@ As you can see, the _k_-fold CV iterator does not consider the datapoint class o
 Let's plot all three together.
 
 
-```python
-cvs = [KFold, StratifiedKFold, GroupKFold]
-
-for cv in cvs:
-    fig, ax = plt.subplots(figsize=(6, 3))
-    plot_cv_indices(cv(n_splits), X, y, groups, ax, n_splits)
-    ax.legend(
-        [Patch(color=cmap_cv(0.8)), Patch(color=cmap_cv(0.02))],
-        ["Testing set", "Training set"],
-        loc=(1.02, 0.8),
-    )
-# Make the legend fit
-plt.tight_layout()
-fig.subplots_adjust(right=0.7)
-
-```
+<div class="highlight"><pre><span></span><span class="n">cvs</span> <span class="o">=</span> <span class="p">[</span><span class="n">KFold</span><span class="p">,</span> <span class="n">StratifiedKFold</span><span class="p">,</span> <span class="n">GroupKFold</span><span class="p">]</span><br><br><span class="k">for</span> <span class="n">cv</span> <span class="ow">in</span> <span class="n">cvs</span><span class="p">:</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">plot_cv_indices</span><span class="p">(</span><span class="n">cv</span><span class="p">(</span><span class="n">n_splits</span><span class="p">),</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">n_splits</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap_cv</span><span class="p">(</span><span class="mf">0.8</span><span class="p">)),</span> <span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap_cv</span><span class="p">(</span><span class="mf">0.02</span><span class="p">))],</span>
+        <span class="p">[</span><span class="s2">&quot;Testing set&quot;</span><span class="p">,</span> <span class="s2">&quot;Training set&quot;</span><span class="p">],</span>
+        <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="c1"># Make the legend fit</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">right</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+</pre></div>
 
 
 
-![png](output_32_0.png)
+
+![png](output_31_0.png)
 
 
 
 
 
-![png](output_32_1.png)
+![png](output_31_1.png)
 
 
 
 
 
-![png](output_32_2.png)
+![png](output_31_2.png)
 
 
 
@@ -780,33 +742,24 @@ fig.subplots_adjust(right=0.7)
 The following uses stratified 3-fold cross-validation to evaluate the `SGDClassifer` we trained on the MNIST dataset. The code then counts the number of correct predictions and outputs the ratio of accurate predictions.
 
 
-```python
-from sklearn.model_selection import StratifiedKFold
-from sklearn.base import clone
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedKFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="kn">import</span> <span class="n">clone</span><br><br><span class="o">%</span><span class="n">store</span> <span class="o">-</span><span class="n">r</span> <span class="n">X_train</span>
+<span class="o">%</span><span class="n">store</span> <span class="o">-</span><span class="n">r</span> <span class="n">X_test</span>
+<span class="o">%</span><span class="n">store</span> <span class="o">-</span><span class="n">r</span> <span class="n">y_train</span>
+<span class="o">%</span><span class="n">store</span> <span class="o">-</span><span class="n">r</span> <span class="n">y_test</span>
+<span class="o">%</span><span class="n">store</span> <span class="o">-</span><span class="n">r</span> <span class="n">y_train_5</span>
+<span class="o">%</span><span class="n">store</span> <span class="o">-</span><span class="n">r</span> <span class="n">y_test_5</span>
+<span class="o">%</span><span class="n">store</span> <span class="o">-</span><span class="n">r</span> <span class="n">sgd_clf</span><br><br><span class="n">skfolds</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><br><br><span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> <span class="ow">in</span> <span class="n">skfolds</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train_5</span><span class="p">):</span>
+    <span class="n">clone_clf</span> <span class="o">=</span> <span class="n">clone</span><span class="p">(</span><span class="n">sgd_clf</span><span class="p">)</span>
+    <span class="n">X_train_folds</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="n">train_index</span><span class="p">]</span>
+    <span class="n">y_train_folds</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_train_5</span><span class="p">[</span><span class="n">train_index</span><span class="p">])</span>
+    <span class="n">X_test_fold</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+    <span class="n">y_test_fold</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_train_5</span><span class="p">[</span><span class="n">test_index</span><span class="p">])</span><br><br>    <span class="n">clone_clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_folds</span><span class="p">,</span> <span class="n">y_train_folds</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">clone_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_fold</span><span class="p">)</span>
+    <span class="n">n_correct</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y_pred</span> <span class="o">==</span> <span class="n">y_test_fold</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n_correct</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
 
-%store -r X_train
-%store -r X_test
-%store -r y_train
-%store -r y_test
-%store -r y_train_5
-%store -r y_test_5
-%store -r sgd_clf
-
-skfolds = StratifiedKFold(n_splits=3)
-
-for train_index, test_index in skfolds.split(X_train, y_train_5):
-    clone_clf = clone(sgd_clf)
-    X_train_folds = X_train[train_index]
-    y_train_folds = (y_train_5[train_index])
-    X_test_fold = X_train[test_index]
-    y_test_fold = (y_train_5[test_index])
-
-    clone_clf.fit(X_train_folds, y_train_folds)
-    y_pred = clone_clf.predict(X_test_fold)
-    n_correct = sum(y_pred == y_test_fold)
-    print(n_correct / len(y_pred))
-
-```
 
     0.9681
     0.95655
@@ -816,10 +769,10 @@ for train_index, test_index in skfolds.split(X_train, y_train_5):
 We can also use the `cross_val_score()` function to evaluate the `SGDClassifier` model using *k*-fold CV, and we get the same results.
 
 
-```python
-from sklearn.model_selection import cross_val_score
-cross_val_score(sgd_clf, X_train, y_train_5, cv=3, scoring='accuracy')
-```
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<span class="n">cross_val_score</span><span class="p">(</span><span class="n">sgd_clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train_5</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+</pre></div>
+
 
 
 
@@ -831,27 +784,23 @@ cross_val_score(sgd_clf, X_train, y_train_5, cv=3, scoring='accuracy')
 The accuracy is above 95% on all cross-validation folds. However, let's look at a dumb classifier that classifies every image as belonging to the "not-5" class. The following classifier, termed `Never5Classifier`, outputs a false prediction for each record passed to it.
 
 
-```python
-from sklearn.base import BaseEstimator
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="kn">import</span> <span class="n">BaseEstimator</span><br><br><span class="k">class</span> <span class="nc">Never5Classifier</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">pass</span><br><br>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+</pre></div>
 
-class Never5Classifier(BaseEstimator):
-    def fit(self, X, y=None):
-        pass
-
-    def predict(self, X):
-        return np.zeros((len(X), 1), dtype=bool)
-```
 
 Let's check this model's accuracy.
 
 
-```python
-never_5_clf = Never5Classifier()
-scores = cross_val_score(never_5_clf, X_train, y_train_5, cv=3, scoring="accuracy")
-print(f'Scores: {scores}')
-print(f'Mean: {scores.mean():.4f}')
-print(f'Standard Deviation: {scores.std():.4f}')
-```
+<div class="highlight"><pre><span></span><span class="n">never_5_clf</span> <span class="o">=</span> <span class="n">Never5Classifier</span><span class="p">()</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">never_5_clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train_5</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;accuracy&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Scores: </span><span class="si">{</span><span class="n">scores</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Mean: </span><span class="si">{</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Standard Deviation: </span><span class="si">{</span><span class="n">scores</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
 
     Scores: [0.909   0.90745 0.9125 ]
     Mean: 0.9097

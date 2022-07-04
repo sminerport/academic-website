@@ -6,14 +6,14 @@ code.hljs.yaml,
 code.hljs.apache,
 code.hljs.css,
 code.hljs.swift {
-  white-space: pre-wrap;
+  white-space: pre;
 }
 
 pre {
   font-family: "Roboto Mono", monospace;
   color: #c7254e;
   background-color: #23252f;
-  white-space: pre-wrap;
+  white-space: pre;
   line-height: 125%;
 }
 
@@ -88,7 +88,7 @@ span.hljs-selector-tag,
 }
 
 img[alt=confusion-matrix] {
-  width: 50%;
+  width: 75%;
 }
 
 img[alt=cross-val] {
@@ -97,12 +97,13 @@ img[alt=cross-val] {
 
 .hljs-selector-tag,
 .hljs-class .hljs-title,
-.hljs-keyword {
+.hljs-keyword,
+span.hljs-meta {
   font-weight: normal
 }
 
 .featured-image {
-  width: 50%
+  width: 66%
 }
 
 .medium-zoom-image {

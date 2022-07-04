@@ -2,13 +2,6 @@ div.article-container {
   max-width: 100%;
 }
 
-code.hljs.yaml,
-code.hljs.apache,
-code.hljs.css,
-code.hljs.swift {
-  white-space: pre;
-}
-
 pre {
   font-family: "Roboto Mono", monospace;
   color: #c7254e;
@@ -16,6 +9,17 @@ pre {
   white-space: pre;
   line-height: 125%;
 }
+
+code.hljs.apache,
+code.hljs.swift {
+  white-space: pre-wrap;
+}
+
+code.hljs.yaml,
+code.hljs.css {
+  white-space: pre;
+}
+
 
 .article-categories {
   white-space: normal;
@@ -88,25 +92,28 @@ span.hljs-selector-tag,
 }
 
 img[alt=confusion-matrix] {
-  width: 75%;
+  width: 80%;
 }
 
 img[alt=cross-val] {
-  width: 50%;
+  width: 88%;
 }
 
 .hljs-selector-tag,
 .hljs-class .hljs-title,
 .hljs-keyword,
-span.hljs-meta {
+.hljs-type,
+span.hljs-type,
+span.hljs-meta,
+span.hljs-keyword {
   font-weight: normal
 }
 
 mjx-container[jax="CHTML"][display="true"] {
-    display: flow-root;
-    text-align: center;
-    margin: 1em 0;
-    overflow-x: scroll;
+  display: flow-root;
+  text-align: center;
+  margin: 1em 0;
+  overflow-x: scroll;
 }
 
 .featured-image {

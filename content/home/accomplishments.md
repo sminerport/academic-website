@@ -7,10 +7,10 @@ widget: accomplishments
 headless: true
 
 # Order that this section appears on the page.
-weight: 50
+weight: 40
 
 # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-title: 'Certifica&shy;tions' 
+title: 'Certifica&shy;tions'
 subtitle: ''
 
 # Date format
@@ -30,9 +30,9 @@ item:
   date_start: "2021-12-14"
   description: |2-
     Tier 1 SAS Academic Specialization
-    
+
     Recipients leverage a variety of SAS tools for SAS datasets, SAS programming, SAS Studio, statistical analysis, data visualization, data mining, descriptive analytics, and predictive analytics.
-  organization: SAS 
+  organization: SAS
   organization_url: https://www.sas.com/en_us/home.html
 
 - title: SAS-CSU Global Academic Specialization in Predictive Analytics Management
@@ -42,23 +42,23 @@ item:
   date_start: "2021-12-14"
   description: |2-
     Tier 1 SAS Academic Specialization
-    
+
     Recipients leverage a variety of SAS tools for SAS datasets, SAS programming, SAS Enterprise Miner, SAS Studio, statistical analysis, data visualization, data mining, descriptive analytics, and predictive analytics.
 
-  organization: SAS 
+  organization: SAS
   organization_url: https://www.sas.com/en_us/home.html
-- title: SAS-CSU Global Academic Specialization in Applied Data Analytics 
+- title: SAS-CSU Global Academic Specialization in Applied Data Analytics
   certificate_url: https://www.credly.com/badges/1150b6d6-57fc-41f1-b608-bf3d3a242ab8
   url: "https://www.credly.com/badges/1150b6d6-57fc-41f1-b608-bf3d3a242ab8"
   date_end: ""
   date_start: "2021-12-14"
   description: |2-
     Tier 3 SAS Academic Specialization
-    
+
     Recipients leverage a variety of SAS tools for SAS datasets, SAS programming, SAS Enterprise Miner, SAS Studio, machine learning, statistical analysis, data visualization, data mining, descriptive analytics, predictive analytics, and text analytics.
-  organization: SAS 
+  organization: SAS
   organization_url: https://www.sas.com/en_us/home.html
 
 design:
-  columns: '2' 
+  columns: '2'
 ---

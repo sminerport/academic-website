@@ -4,8 +4,8 @@
 title: "Common Personality Traits"
 summary: "Implements UML class and sequence diagrams depicting personality traits shared among expert software developers."
 authors: ["admin"]
-tags: ["Computer Science", "OOP", "Python", "Requirements Gathering", "UML"]
-categories: ["Computer Science", "OOP", "Python", "Requirements Gathering", "UML"]
+tags: ["Algorithms", "Data Engineering", "Software Engineering"]
+categories: ["Algorithms", "Data Engineering", "Software Engineering"]
 date: 2021-10-29T17:03:22-06:00
 
 # Optional external URL for project (replaces project detail page).

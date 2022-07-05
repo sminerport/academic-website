@@ -5,8 +5,8 @@ title: Tableau Dashboard
 subtitle: Visualizing Earthquake Data in Tableau
 summary: "Generates summary statistics and analyzes data from the U.S. Department of Health and Human Services."
 authors: ["admin"]
-tags: ["Tableau", "Management Information Systems", "Dashboards", "Data Analytics", "Data Visualization", "Earth Science"] 
-categories: ["Tableau", "Management Information Systems", "Dashboard", "Data Analytics", "Data Visualization", "Earth Science"] 
+tags: ["Dashboards", "Data Engineering", "Software Engineering"]
+categories: ["Dashboards", "Data Engineering", "Software Engineering"]
 date: 2021-10-24T07:13:33.971Z
 featured: false
 image:

@@ -4,8 +4,8 @@
 title: "Capstone Project--Final Report and Slide Presentation: Non-U.S. Organization"
 summary: "Employs a predictive correlational design to determine how accurately one can predict a song's popularity on Spotify and its chances of becoming a number one hit on the Billboard Hot 100 charts"
 authors: ["admin"]
-tags: ["PowerPoint", "SAS","Capstone","Predictive Analytics", "Management Information Systems", "Statistical Modeling", "Technology"]
-categories: ["SAS", "Capstone", "PowerPoint", "Statistical Modeling", "Predictive Analytics", "Technology"]
+tags: ["Artificial Intelligence", "Classifiers", "Data Engineering", "Machine Learning"]
+categories: ["Artificial Intelligence", "Classifiers", "Data Engineering", "Machine Learning"]
 date: 2021-10-27T10:31:36-06:00
 
 # Optional external URL for project (replaces project detail page).

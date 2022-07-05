@@ -2,10 +2,10 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Data Loading - Northwind Data"
-summary: "Develops a star schema-based OLAP data warehouse modeling a retailer's order fullfillment process" 
-authors: ["admin"] 
-tags: ["Business Analytics", "Data Analytics", "Data Warehousing", "Enterprise Performance Management", "ETL", "OLAP", "OLTP", "PostgreSQL", "Retail", "RequirementsGathering", "SQL"]
-categories: ["Business Analytics", "Data Analytics", "Data Warehousing", "Enterprise Performance Management", "ETL", "OLAP"]
+summary: "Develops a star schema-based OLAP data warehouse modeling a retailer's order fullfillment process"
+authors: ["admin"]
+tags: ["Data Engineering", "Data Warehousing", "Software Engineering"]
+categories: ["Data Engineering", "Data Warehousing", "Software Engineering"]
 date: 2021-10-25T02:42:00-06:00
 
 # Optional external URL for project (replaces project detail page).
@@ -15,7 +15,7 @@ external_link: ""
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Star-Schema DW" 
+  caption: "Star-Schema DW"
   focal_point: "Smart"
   preview_only: false
 

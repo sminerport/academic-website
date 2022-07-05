@@ -4,8 +4,8 @@
 title: "Web-based Pothole Tracking and Repair System"
 summary: "Allows citizens to log onto a website and report the location and severity of potholes"
 authors: ["admin"]
-tags: ["OOP", "Government", "Computer Science", "Model-View-Controller", "Flask", "JavaScript", "Web Apps", "Python", "UML"]
-categories: ["OOP", "Model-View-Controller", "Flask", "JavaScript", "Web Apps", "Python", "UML"]
+tags: ["Data Engineering", "Software Engineering", "Web Apps"]
+categories: ["Data Engineering", "Software Engineering", "Web Apps"]
 date: 2021-10-27T14:06:02-06:00
 
 # Optional external URL for project (replaces project detail page).
@@ -49,7 +49,7 @@ links:
 slides: ""
 ---
 
-This project creates a web-based pothole tracking and repair system (PHTRS) that allows citizens to log onto a website and report the location and severity of potholes using Python and the Flask micro web framework. Also, the project allows employees to log in and view citizen submissions, creating work orders that assign repair crews, equipment, filler material, etc. to each pothole. The program implements the Model-View-Controller (MVC) architecture. Finally, the program uses JavaScript to dynamically update the repair's cost and the pothole's ZIP code. 
+This project creates a web-based pothole tracking and repair system (PHTRS) that allows citizens to log onto a website and report the location and severity of potholes using Python and the Flask micro web framework. Also, the project allows employees to log in and view citizen submissions, creating work orders that assign repair crews, equipment, filler material, etc. to each pothole. The program implements the Model-View-Controller (MVC) architecture. Finally, the program uses JavaScript to dynamically update the repair's cost and the pothole's ZIP code.
 
 <hr/>
 

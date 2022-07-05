@@ -4,8 +4,8 @@
 title: "Using Data Analytics in a Hospital Setting"
 summary: "Implements the CRISP-DM to predict how much medicine a hospital needs to keep on hand each year to treat all patients and reduce overstock costs"
 authors: ["admin"]
-tags: ["Artificial Intelligence", "Business Analytics", "Healthcare", "Machine Learning", "Predictive Analytics", "Requirements Gathering", "Statistical Modeling"]
-categories: ["Artificial Intelligence", "Business Analytics", "Healthcare", "Machine Learning", "Predictive Analytics"]
+tags: ["Artificial Intelligence", "Data Engineering", "Machine Learning" ]
+categories: ["Artificial Intelligence", "Data Engineering", "Machine Learning" ]
 date: 2021-10-27T08:10:32-06:00
 
 # Optional external URL for project (replaces project detail page).
@@ -53,7 +53,7 @@ url_video: ""
 slides: ""
 ---
 
-This project implements predictive analytics and the cross-industry process for data mining (CRISP-DM) to predict how much medicine a hospital needs to keep on hand each year to treat all patients and reduce overstock costs. The project uses SAS to compare various statistical models, including decisiton trees (DTs), linear and logistic regression, artificial neural networks (ANNs), naive Bayes (NB), and support vector machines (SVMs). 
+This project implements predictive analytics and the cross-industry process for data mining (CRISP-DM) to predict how much medicine a hospital needs to keep on hand each year to treat all patients and reduce overstock costs. The project uses SAS to compare various statistical models, including decisiton trees (DTs), linear and logistic regression, artificial neural networks (ANNs), naive Bayes (NB), and support vector machines (SVMs).
 
 <hr/>
 

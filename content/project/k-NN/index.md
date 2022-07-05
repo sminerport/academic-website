@@ -4,8 +4,8 @@
 title: "K-NN Classifier with Iris Data"
 summary: "Implements a k-NN classifier from scratch in Python that achieves a 96.67% accuracy on the Iris Dataset using 5-fold cross-validation (CV) and the models' number of neighbors set to 10."
 authors: ["admin"]
-tags: ["Artificial Intelligence", "Classifiers", "Computer Science", "Data Analytics", "Euclidean Distance", "Iris Dataset", "k-NN",  "Machine Learning", "Predictive Analytics", "Python", "Statistical Modeling" ]
-categories: ["Artificial Intelligence", "Classifiers", "Computer Science", "Data Analytics", "Euclidean Distance", "Iris Dataset"]
+tags: ["Algorithms", "Artificial Intelligence", "Classifiers", "Data Engineering", "Machine Learning", "Software Engineering" ]
+categories: ["Algorithms", "Artificial Intelligence", "Classifiers", "Data Engineering", "Machine Learning", "Software Engineering" ]
 date: 2021-12-21T23:48:10-07:00
 
 # Optional external URL for project (replaces project detail page).

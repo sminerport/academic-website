@@ -3,11 +3,14 @@
 # Docs: https://wowchemy.com/docs/page-builder/
 widget: tag_cloud
 
+# Activate this widget? true/false
+
+active: false
 # This file represents a page section.
 headless: true
 
 # Order that this section appears on the page.
-weight: 30 
+weight: 30
 
 title: Project Topics
 subtitle: ''

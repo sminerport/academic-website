@@ -114,8 +114,8 @@ mjx-container[jax="CHTML"][display="true"] {
   text-align: center;
   margin: 1em 0;
   overflow-x: auto;
-  overflow-y: auto;
-  height: 70px;
+  overflow-y: hidden;
+  height: auto;
 }
 
 .featured-image {

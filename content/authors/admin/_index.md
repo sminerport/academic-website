@@ -3,9 +3,10 @@ title: Scott Miner
 role: |2-
   Data Scientist
 
+  Machine Learning Engineer
+
   Software Engineer
 
-  Machine Learning Engineer
 bio: My interests include leveraging data analytics, artificial intelligence, and machine learning to help organizations gain valuable insights from information to automate processes and enhance decision-making.
 interests:
   - Artificial Intelligence

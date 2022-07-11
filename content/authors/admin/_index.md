@@ -4,20 +4,23 @@ role: |2-
   Data Scientist
 
   Machine Learning Engineer
+
+  Software Engineer
+
 bio: My interests include leveraging data analytics, artificial intelligence, and machine learning to help organizations gain valuable insights from information to automate processes and enhance decision-making.
 interests:
   - Artificial Intelligence
-  - Machine Learning 
+  - Computer Vision
+  - Machine Learning
   - Natural Language Processing
-  - Computer vision
- 
+
 social:
   - icon: envelope
     icon_pack: fas
     link: /#contact
-#  - icon: twitter
-#    icon_pack: fab
-#    link: https://twitter.com/scottdatascience
+  - icon: twitter
+    icon_pack: fab
+    link: https://twitter.com/scottdatascienc
 #  - icon: graduation-cap
 #   icon_pack: fas
 #    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
@@ -34,7 +37,7 @@ education:
   courses:
     - course: MS in Data Analytics
       institution: Colorado State University Global
-      year: 2021 
+      year: 2021
     - course: Certified Programming Specialist
       institution: Red Rocks Community College
       year: 2017
@@ -48,6 +51,6 @@ email: "scott.miner@csuglobal.edu"
 superuser: true
 highlight_name: true
 ---
-Adept at analyzing disparate data sets to gather valuable performance insight. Work collaboratively across departments to formulate and implement appropriate solutions to drive efficiency, performance, and cost savings. Excellent communication and people skills with the ability to bridge communication across diverse populations. 
+Adept at analyzing disparate data sets to gather valuable performance insight. Work collaboratively across departments to formulate and implement appropriate solutions to drive efficiency, performance, and cost savings. Excellent communication and people skills with the ability to bridge communication across diverse populations.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/scott_miner_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.

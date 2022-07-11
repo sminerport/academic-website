@@ -15,6 +15,10 @@ image:
   preview_only: false
 
 links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://www.twitter.com/scottdatascienc
 - icon: envelope-open-text
   icon_pack: fas
   name: Email

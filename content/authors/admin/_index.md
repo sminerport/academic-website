@@ -7,6 +7,8 @@ role: |2-
 
   Software Engineer
 
+  Web Developer
+
 bio: My interests include leveraging data analytics, artificial intelligence, and machine learning to help organizations gain valuable insights from information to automate processes and enhance decision-making.
 interests:
   - Artificial Intelligence

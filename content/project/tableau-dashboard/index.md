@@ -22,7 +22,7 @@ links:
 - icon: envelope-open-text
   icon_pack: fas
   name: Email
-  url: https://scottminer.rbind.io/#contact
+  url: https://scottminer.netlify.app/#contact
 - icon: github
   icon_pack: fab
   name: Github

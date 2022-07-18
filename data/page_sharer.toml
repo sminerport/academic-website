@@ -71,7 +71,7 @@
   title = "Pinterest"
   icon_pack = "fab"
   icon = "pinterest"
-  enable = false
+  enable = true
 
 [[buttons]]
   id = "xing"

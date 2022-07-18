@@ -5,10 +5,10 @@ title: "ROC Curves"
 subtitle: "Plots and Discusses ROC curves for Binary and Multiclass Classification Problems Using the Iris Dataset"
 summary: "Plots and Discusses ROC curves for Binary and Multiclass Classification Problems Using the Iris Dataset"
 authors: ["Scott Miner"]
-tags: ["ROC Curves", "Receiver Operating Characteristic", "Multiclass Classification", "Confusion Matrix", "Confusion Matrices", "Thresholds", "Sklearn", "Scikit-Learn", "Python", "Iris Dataset", "One-versus-Rest", "Classifiers"]
-categories: ["ROC Curves", "Receiver Operating Characteristic", "Multiclass Classification", "Thresholds", "Confusion Matrix", "Confusion Matricies", "Sklearn", "Scikit-Learn", "Python", "Iris Dataset", "One-versus-Rest", "Classifiers"]
-date: 2022-07-17T22:26:35.413282
-lastmod: 2022-07-17T22:26:35.413282
+tags: ["ROC Curves", "Multiclass Classification", "Confusion Matrices", "Scikit-Learn", "Python", "Iris Dataset", "One-versus-Rest", "Classifiers"]
+categories: ["ROC Curves", "Multiclass Classification", "Confusion Matrices", "Scikit-Learn", "Python", "Iris Dataset", "One-versus-Rest", "Classifiers"]
+date: 2022-07-17T22:47:55.754539
+lastmod: 2022-07-17T22:47:55.754539
 featured: false
 draft: false
 
